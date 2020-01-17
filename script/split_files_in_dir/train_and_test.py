@@ -3,7 +3,7 @@ import script.split_files_in_dir.util as util
 import datetime
 
 
-part = 6
+part = 10
 
 
 def get_all_data(path):
@@ -83,7 +83,7 @@ def run_dev(init):
 
 if __name__ == "__main__":
     # run("F:/实验数据暂存/THUCNews/THUCNews", "F:/实验数据暂存/THUCNews/testNews")
-    init = util.util("F:/实验数据暂存/THUCNews/THUCNews", "F:/实验数据暂存/tempNews")
+    init = util.util("F:/rent_house_contract_pos/trn", "F:/rent_house_contract_pos/tst")
     start_time = init.start_time
     print(start_time)
     run_dev(init)

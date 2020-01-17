@@ -52,7 +52,7 @@ class model_cnn(object):
             # if l2_reg_lambda:
             #     W_l2_loss = tf.contrib.layers.l2_regularizer(l2_reg_lambda)(W)
             #     tf.add_to_collection("losses", W_l2_loss)
-            self.scores = tf.nn.sigmoid(tf.nn.xw_plus_b(self.h_drop, W, b), name="scores")
+            self.scores = tf.nn.xw_plus_b(self.h_drop, W, b, name="scores")
             # (self.h_drop * W + b)
             self.predictions = tf.argmax(self.scores, 1, name="predictions")
             # 找出分数中的最大值，就是预测值

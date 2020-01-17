@@ -1,7 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="" />
+    <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/1c34eab47dc9d522d2e9028cfaf441b4.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/3a7a116a2fa918c9859aa89f25b53de1.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/4ad956f6de6781665f41e9d4b5a9d1c7.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/58c1248641b8e4a5adf9943de76743b3.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/5d22b1a1f4f8c5b5411e1384a0e25d12.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/61c2292d33460158fcf71775991ea62e.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/d395cb17cc01e272379a686c2038f702.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/cache/f910b169431e5c076d32b067bda56fd4.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1000.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1000.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1000.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1008.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1008.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1008.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-800.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-800.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-800.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-864.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-864.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-864.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-900.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-900.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-900.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579074714.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579074747.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579075371.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579076117.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579076250.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579078513.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579078695.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579079052.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579079209.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579079344.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579074714.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579074747.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579075371.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579076117.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579076250.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579078513.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579078694.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579079052.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579079209.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579079344.DESKTOP-DTTJ3C3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact_classify/vocab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/deal_docx/deal_path.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/deal_docx/move_head.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/deal_docx/replace_doc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/filter_file_name.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_script/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_script/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_script/test_classfiy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_classify/normal_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact_classify/normal_param.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal_docx/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/deal_docx/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal_docx/deal_doc.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/deal_docx/deal_doc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deal_docx/deal_path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/cnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_data/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_data/process_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/split_files_in_dir/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/split_files_in_dir/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/check_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/check_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/normal_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normal_util.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,14 +75,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deal_docx/deal_path.py">
+        <entry file="file://$PROJECT_DIR$/script/filter_file_name.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro_data/process_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3325">
+              <caret line="143" column="30" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_script/test_classfiy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -25,25 +124,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
+            <state relative-caret-position="50">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/read_docx_paragraph/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/split_files_in_dir/util.py">
+        <entry file="file://$PROJECT_DIR$/contact_classify/normal_param.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="625">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -51,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/normal_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="525">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -63,8 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/check_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1118">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="1825">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -95,25 +198,36 @@
         <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/contact_classify/train.py" />
         <option value="$PROJECT_DIR$/deal_doc_head/process_data.py" />
-        <option value="$PROJECT_DIR$/model/cnn.py" />
         <option value="$PROJECT_DIR$/deal_doc_head/deal_doc.py" />
         <option value="$PROJECT_DIR$/deal_docx/check_utils.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/deal_docx/deal_doc.py" />
         <option value="$PROJECT_DIR$/utils/util.py" />
-        <option value="$PROJECT_DIR$/utils/check_utils.py" />
-        <option value="$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py" />
-        <option value="$PROJECT_DIR$/utils/normal_util.py" />
         <option value="$PROJECT_DIR$/deal_docx/deal_path.py" />
+        <option value="$PROJECT_DIR$/deal_docx/replace_doc.py" />
+        <option value="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" />
+        <option value="$PROJECT_DIR$/script/filter_file_name.py" />
+        <option value="$PROJECT_DIR$/script/move_head.py" />
+        <option value="$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py" />
+        <option value="$PROJECT_DIR$/script/split_files_in_dir/util.py" />
+        <option value="$PROJECT_DIR$/contact_classify/normal_param.py" />
+        <option value="$PROJECT_DIR$/script/deal_docx/move_head.py" />
+        <option value="$PROJECT_DIR$/utils/check_utils.py" />
+        <option value="$PROJECT_DIR$/pro_data/process_data.py" />
+        <option value="$PROJECT_DIR$/model/cnn.py" />
+        <option value="$PROJECT_DIR$/test_script/test.py" />
+        <option value="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/checkpoint" />
+        <option value="$PROJECT_DIR$/utils/normal_util.py" />
+        <option value="$PROJECT_DIR$/test_script/test_classfiy.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="130" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -129,6 +243,16 @@
               <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
               <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_classify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -138,7 +262,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cnn-classifiy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -151,18 +275,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\phython workspace\deal_contact\test_script" />
       <recent name="F:\phython workspace\deal_contact\utils" />
       <recent name="F:\phython workspace\deal_contact\spyder" />
       <recent name="F:\phython workspace\deal_contact\script" />
       <recent name="F:\phython workspace\deal_contact" />
-      <recent name="F:\phython workspace\deal_contact\deal_doc_head" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\phython workspace\deal_contact\script\deal_docx" />
+      <recent name="F:\phython workspace\deal_contact\script" />
       <recent name="F:\phython workspace\deal_contact\script\split_files_in_dir" />
       <recent name="F:\phython workspace\deal_contact\utils" />
       <recent name="F:\phython workspace\deal_contact\pro_data" />
-      <recent name="F:\phython workspace\deal_contact\cache" />
-      <recent name="F:\phython workspace\deal_contact\contact_classify" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -177,8 +301,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="deal_doc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test_classfiy">
+    <configuration name="filter_file_name" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deal_contact" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -186,12 +310,100 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deal_docx" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deal_docx/deal_doc.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/filter_file_name.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deal_contact" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_script" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_script/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_classfiy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deal_contact" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_script" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_script/test_classfiy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deal_contact" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/contact_classify" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/contact_classify/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_and_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deal_contact" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script/split_files_in_dir" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -202,7 +414,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.deal_doc" />
+        <item itemvalue="Python.test_classfiy" />
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.filter_file_name" />
+        <item itemvalue="Python.train_and_test" />
       </list>
     </recent_temporary>
   </component>
@@ -216,60 +432,139 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578453827593</updated>
-      <workItem from="1578453829098" duration="23110000" />
+      <workItem from="1578453829098" duration="60657000" />
+      <workItem from="1578910056897" duration="11100000" />
+      <workItem from="1579006263319" duration="12978000" />
+      <workItem from="1579075205641" duration="14694000" />
+      <workItem from="1579139086991" duration="7702000" />
+      <workItem from="1579240251979" duration="1204000" />
+      <workItem from="1579260294456" duration="1827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23110000" />
+    <option name="totallyTimeSpent" value="110162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19722815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="SOQL Query" />
-      <window_info anchor="bottom" id="Log Analyzer" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32962137" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Anonymous Apex" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32925472" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.47719687" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.54899776" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39532295" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32962137" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="SOQL Query" order="10" />
+      <window_info anchor="bottom" id="Log Analyzer" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32962137" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32962137" />
+      <window_info anchor="bottom" id="Python Console" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850778" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39532295" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="SOQL Query" order="10" />
+      <window_info anchor="bottom" id="Log Analyzer" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32962137" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32962137" />
+      <window_info anchor="bottom" id="Python Console" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/normal_util.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/script/deal_docx/move_head.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="mode == 'path'" language="Python" />
-        <watch expression="re.search(&quot;/.&quot;,name)" language="Python" />
-        <watch expression="path_name.split(&quot;.&quot;)[0]" language="Python" />
+        <watch expression="re.match(&quot;房屋|租赁&quot;, name)" language="Python" />
+        <watch expression="classfiy" language="Python" />
+        <watch expression="pros.tolist()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/deal_contact$train.coverage" NAME="train Coverage Results" MODIFIED="1579092427005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contact_classify" />
+    <SUITE FILE_PATH="coverage/deal_contact$doc_to_docx.coverage" NAME="doc_to_docx Coverage Results" MODIFIED="1578656763545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/doc_to_docx" />
     <SUITE FILE_PATH="coverage/deal_contact$deal_doc.coverage" NAME="deal_doc Coverage Results" MODIFIED="1578561560100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deal_docx" />
+    <SUITE FILE_PATH="coverage/deal_contact$deal_path.coverage" NAME="deal_path Coverage Results" MODIFIED="1578643405028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deal_docx" />
+    <SUITE FILE_PATH="coverage/deal_contact$train_and_test.coverage" NAME="train_and_test Coverage Results" MODIFIED="1579074598406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/split_files_in_dir" />
+    <SUITE FILE_PATH="coverage/deal_contact$test.coverage" NAME="test Coverage Results" MODIFIED="1579090012457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_script" />
+    <SUITE FILE_PATH="coverage/deal_contact$test_classfiy.coverage" NAME="test_classfiy Coverage Results" MODIFIED="1579139369356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_script" />
+    <SUITE FILE_PATH="coverage/deal_contact$move_head.coverage" NAME="move_head Coverage Results" MODIFIED="1579072323353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/deal_docx" />
+    <SUITE FILE_PATH="coverage/deal_contact$filter_file_name.coverage" NAME="filter_file_name Coverage Results" MODIFIED="1579086220607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>pros.tolist()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>classfiy</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.match(&quot;房屋|租赁&quot;, name)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>re.match(filt, name)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>path_name_without_sub not in paths_name_without_sub</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>path_name.split(&quot;.&quot;)[0]</expression-string>
         <language-id>Python</language-id>
@@ -293,42 +588,8 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cache/cache.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cache/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/normal_param.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://D:/Anaconda3/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -351,29 +612,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/cnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/Lib/site-packages/imageio/plugins/_bsdf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="884" column="8" selection-start-line="884" selection-start-column="8" selection-end-line="884" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/Lib/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="182" selection-start-line="182" selection-end-line="182" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/read_docx_paragraph/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/spyder/www_chinalawedu_com.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -382,10 +626,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deal_docx/deal_doc.py">
+    <entry file="file://$PROJECT_DIR$/utils.py" />
+    <entry file="file://$PROJECT_DIR$/script/deal_docx/deal_doc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
@@ -399,26 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="524" column="4" selection-start-line="524" selection-start-column="4" selection-end-line="524" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro_data/process_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -442,20 +664,199 @@
     <entry file="file://$PROJECT_DIR$/pro_data/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://D:/Anaconda3/Lib/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/read_docx_paragraph/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/turtle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50050">
+          <caret line="2011" column="4" selection-start-line="2011" selection-start-column="4" selection-end-line="2011" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/deal_docx/deal_path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/docx/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/script/split_files_in_dir/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="250">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/script/deal_docx/replace_doc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/read_docx_paragraph/read_docx_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/deal_docx/move_head.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/docx/opc/phys_pkg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-925">
+          <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/docx/document.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/vocab">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3750" />
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/Lib/site-packages/tensorflow/contrib/learn/python/learn/preprocessing/categorical_vocabulary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_script/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/checkpoint">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="115" selection-start-column="115" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/filter_file_name.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro_data/process_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3325">
+          <caret line="143" column="30" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/normal_param.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/normal_util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="525">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -464,28 +865,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/check_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="1825">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deal_docx/deal_path.py">
+    <entry file="file://$PROJECT_DIR$/test_script/test_classfiy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        <state relative-caret-position="299">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -7,8 +7,8 @@ from contact_classify import normal_param, evaluation
 from progressbar import *
 from cache import cache
 from tqdm import tqdm
-
-
+from docx import Document
+from utils import normal_util, check_utils
 # import gensim
 class process_data(object):
     def __init__(self):
@@ -22,16 +22,17 @@ class process_data(object):
 
         # progress = ProgressBar()
         for text_path, label in tqdm(parted_text_path):
-            content_and_label = self.load_data(text_path, label=label, is_word_split=is_word_split)
+            # content_and_label = self.load_data(text_path, label=label, is_word_split=is_word_split)
+            content_and_label = self.load_data_docx (text_path, label=label, is_word_split=is_word_split)
             contents_and_labels.append(content_and_label)
         return contents_and_labels
-
 
     def clean_data(self, text):
         '''清洗数据，删掉无用字符'''
         # print(text)
         text = re.sub("\\n", " ", text)
         text = re.sub(u"\\(.*?\\)|\\{.*?}|\\[.*?]|\\（.*?）|\\【.*?】", " ", text)
+        text = re.sub(u"_", " ", text)
         # text = re.sub("/(.*?)/", "", text)
 
         # text = re.sub(":", " ", text)
@@ -53,7 +54,7 @@ class process_data(object):
             for part_n in range(normal_param.num_database):
                 is_save = False
                 # train_data, train_label, dev_data, dev_label, vocal_size_train = self.deal_data(part=echo_part_num,n_part=part_n)
-                train_data, train_label, vocal_size_train = self.deal_data(part=echo_part_num,n_part=part_n)
+                train_data, train_label, vocal_size_train = self.deal_data(part=echo_part_num, n_part=part_n)
                 dev_data, dev_label = evaluation.run()
                 data = list(zip(train_data, train_label))
                 data = np.array(data)
@@ -98,6 +99,39 @@ class process_data(object):
             content_and_label = [content, label]
         return content_and_label
 
+    def load_data_docx(self, text_path, label=None, is_word_split=False):
+        '''根据输入的文件路径以及文件对应的label，载入数据，输出label以及文件内容'''
+        content_and_label = []
+        # with open(text_path, "rb") as f:
+        #     content = ""
+        #     for line in f:
+        #         content = content + line.decode("utf-8")
+        #     # print(content)
+        #     content = self.clear_stop_word(content)
+        #     content = self.clean_data(content)
+        #     # content = [i for i in content.split(" ")]
+        #     # if label is None:
+        #     #     return content
+        #     content_and_label = [content, label]
+        document = Document(text_path)
+        document_content = ""
+        for content_para in document.paragraphs:
+            content = content_para.text
+            if check_utils.check_useless_seq(content):
+                continue
+            document_content += " " + content
+        document_content = self.clear_stop_word(document_content)
+        document_content = self.clean_data(document_content)
+            # if label is None:
+            #     return content
+        content_and_label = [document_content, label]
+
+
+
+
+
+        return content_and_label
+
     def split_data_file(self, path):
         '''将路径整理存放在self.all_text_path中，计算出需要被切割成多少part'''
         labels = os.listdir(path)
@@ -136,7 +170,6 @@ class process_data(object):
             x = np.array(list(vocab_processor.fit_transform(x_texts)))
             vocab_processor.save(os.path.join("./", "vocab"))
 
-
         # x = np.array(list_arr_text)
 
         print("x::", x)
@@ -152,8 +185,6 @@ class process_data(object):
         #     vocab_processor.vocabulary_)
         return text_shuffled, self.dense_to_one_hot(label_shuffled, normal_param.num_class), len(
             vocab_processor.vocabulary_)
-
-
 
     def clear_stop_word(self, text_content):
         '''清除停用词'''

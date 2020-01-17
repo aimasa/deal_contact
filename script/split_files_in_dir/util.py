@@ -16,7 +16,7 @@ class util(object):
     def copy_move(self, src_path, dest_path):
         try:
             self.check_path(dest_path)
-            shutil.copy(src_path, dest_path)
+            shutil.move(src_path, dest_path)
         except:
             pass
 
