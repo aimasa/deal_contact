@@ -1,73 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/1c34eab47dc9d522d2e9028cfaf441b4.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/3a7a116a2fa918c9859aa89f25b53de1.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/4ad956f6de6781665f41e9d4b5a9d1c7.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/58c1248641b8e4a5adf9943de76743b3.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/5d22b1a1f4f8c5b5411e1384a0e25d12.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/61c2292d33460158fcf71775991ea62e.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/d395cb17cc01e272379a686c2038f702.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/cache/f910b169431e5c076d32b067bda56fd4.dump" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/checkpoint" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1000.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1000.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1000.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1008.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1008.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-1008.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-800.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-800.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-800.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-864.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-864.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-864.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-900.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-900.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/checkpoint/model-900.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579074714.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579074747.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579075371.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579076117.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579076250.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579078513.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579078695.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579079052.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579079209.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/dev/events.out.tfevents.1579079344.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579074714.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579074747.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579075371.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579076117.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579076250.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579078513.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579078694.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579079052.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579079209.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/runs/run_10/summary/train/events.out.tfevents.1579079344.DESKTOP-DTTJ3C3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact_classify/vocab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/deal_docx/deal_path.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/deal_docx/move_head.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/deal_docx/replace_doc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/filter_file_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_script/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_script/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_script/test_classfiy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_classify/normal_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact_classify/normal_param.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deal_docx/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/deal_docx/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deal_docx/deal_doc.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/deal_docx/deal_doc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deal_docx/deal_path.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/cnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro_data/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_data/process_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/split_files_in_dir/train_and_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/split_files_in_dir/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/split_files_in_dir/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/check_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/check_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/normal_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normal_util.py" afterDir="false" />
-    </list>
+    <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,19 +59,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -242,16 +164,6 @@
             <path>
               <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
               <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
-              <item name="contact_classify" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -443,11 +355,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110162000" />
+    <option name="totallyTimeSpent" value="110363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19722815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -464,7 +375,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="SOQL Query" order="10" />
       <window_info anchor="bottom" id="Log Analyzer" order="11" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32962137" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.5801782" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32962137" />
       <window_info anchor="bottom" id="Python Console" order="15" />
@@ -886,7 +797,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
