@@ -22,9 +22,14 @@ class process_data(object):
 
         # progress = ProgressBar()
         for text_path, label in tqdm(parted_text_path):
-            # content_and_label = self.load_data(text_path, label=label, is_word_split=is_word_split)
-            content_and_label = self.load_data_docx (text_path, label=label, is_word_split=is_word_split)
-            contents_and_labels.append(content_and_label)
+            try:
+                # content_and_label = self.load_data(text_path, label=label, is_word_split=is_word_split)
+                content_and_label = self.load_data_docx(text_path, label=label, is_word_split=is_word_split)
+                contents_and_labels.append(content_and_label)
+            except Exception as e:
+                print(e)
+                print("\n")
+                continue
         return contents_and_labels
 
     def clean_data(self, text):
@@ -113,6 +118,7 @@ class process_data(object):
         #     # if label is None:
         #     #     return content
         #     content_and_label = [content, label]
+
         document = Document(text_path)
         document_content = ""
         for content_para in document.paragraphs:
