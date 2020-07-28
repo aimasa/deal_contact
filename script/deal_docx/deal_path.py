@@ -32,6 +32,8 @@ class deal_path(object):
         for all_repeated_path in self.all_repeated_paths:
             normal_util.copy_move(all_repeated_path, dest)
 
+
+
 if __name__=="__main__":
     path = "F:/rent_house_contract_pos/rent_house_contract_pos"
     deal_path = deal_path(path)

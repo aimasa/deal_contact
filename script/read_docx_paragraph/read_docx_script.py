@@ -45,7 +45,7 @@ def check_is_exit(label_file_name):
     if not os.path.exists(label_file_name):
         os.makedirs(label_file_name)
 
-# 读取文件夹中的文件数据
+# 读取文件夹中的文件路径
 def read_dir_file(dir_file_path):
     try:
         contract_file_path = os.listdir(dir_file_path)

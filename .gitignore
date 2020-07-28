@@ -1,3 +1,4 @@
-./cache
-./contact_classify/cache
-./contact_classify/runs
+cache/
+contact_classify/cache/
+contact_classify/runs/
+.txt

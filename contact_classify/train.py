@@ -2,7 +2,6 @@ import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import tensorflow as tf
-
 from model import cnn
 from pro_data.process_data import process_data
 import time

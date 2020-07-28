@@ -51,7 +51,7 @@ def names_filter(names,list_filts):
     filted_name = []
     for name in names:
         for filt in list_filts:
-            if re.match(filt, name):
+            if re.search(filt, name):
                 filted_name += [name]
     return filted_name
 
@@ -62,6 +62,8 @@ def concat_file_path(path, files_name):
     :return 该path文件夹下所有的文件（夹）的路径'''
     files_path = []
     for file_name in files_name:
+        if not check_utils.check_path_style(file_name, mode="suffix",is_flag=False):
+            continue
         file_path = os.path.join(path, file_name)
         files_path += [file_path]
     return files_path
@@ -75,3 +77,4 @@ def get_doc_file(path):
         if file.endswith(".doc"):  # 排除文件夹内的其它干扰文件，只获取".doc"后缀的word文件
             files.append(path + file)
     return files
+

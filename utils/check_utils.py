@@ -3,13 +3,15 @@ import os
 from utils import normal_util
 import difflib
 
-def check_path_style(name, mode, is_flag=True):
+def check_path_style(name, mode="none", is_flag=True):
     '''检查path路径下的文件名称
     :param name(str) 文件名,如path 检测是否有后缀   suffix 检测是否是doc
-    :param mode(str) 需要检查的种类 path or suffix
+    :param mode(str) 需要检查的种类 path or suffix default "none"
     :param is_flag 是否只做判断返回 True or False default:True
     :return true/false  只做判断返回 path 有后缀则false suffix 是文件docx则false
     :return true/false  不只做判断返回 path 有后缀则false，并且返回后缀位置。 suffix 是文件docx则false，并且返回后缀位置'''
+    if mode == 'none':
+        return True
     if mode == 'path' and re.search("\.", name):
         if is_flag:
             return False
@@ -58,7 +60,7 @@ def check_file_style(srcs, dests, mode):
 
 
 def check_useless_seq(content):
-    if re.match(".*律师365|.*第一范文网", content):
+    if re.match(".*律师365|.*第一范文网|.*相关推荐|.*文章来源", content):
         return True
     return False
 
