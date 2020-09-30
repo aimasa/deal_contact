@@ -1,10 +1,10 @@
 import re
 import docx
 from pyquery import PyQuery as pq
-
+import os
 
 # 读取合同html页面内容
-def read_contact_html(all_link):
+def read_contact_html(all_link, save_file_head):
     for html_link in all_link:
         # 从指定的url去解析合同界面
         doc = pq("https:" + html_link, encoding="gb2312")
@@ -26,11 +26,11 @@ def read_contact_html(all_link):
 
         text_head = [h.text() for h in doc.items('.ArtContent h1')]
 
-        save_contact(real_name, text_body, text_end)
+        save_contact(real_name, text_body, text_end, save_file_head)
 
 
 # 将读取的文件以结构化形式保存下来
-def save_contact(real_name, text_body, text_end):
+def save_contact(real_name, text_body, text_end, save_file_head):
     range_idex = 0
     # 对解析好的合同页面内容进行切割存储
     for i in range(len(real_name)):
@@ -49,11 +49,11 @@ def save_contact(real_name, text_body, text_end):
             # 按段存储进docx文档中
             file.add_paragraph(text_body[contract_body])
         title_name = real_name[i] + ".docx"
-        file.save(title_name)
+        file.save(os.path.join(save_file_head, title_name))
 
 
 # 通过目录页找到合同url列表
-def run(url):
+def download(url, save_file_head):
     # based_url = "https://www.diyifanwen.com/fanwen/zulinhetong/index_"
     # for url_index in range(11, 21):
     # url = based_url + str(url_index) + ".html"
@@ -62,15 +62,18 @@ def run(url):
                                                                 '(Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
                                                                 '(KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36'})
     all_link = [link.attr('href') for link in doc_all.items('#AListBox a')]
-    read_contact_html(all_link)
+    read_contact_html(all_link, save_file_head)
 
+def run(based_url, save_file_head):
+    download(based_url, save_file_head)
+    for url_index in range(2, 20):
+        try:
+            download(based_url + "index_" + str(url_index) + ".html", save_file_head)
+        except Exception:
+            continue
 
 # 运行
 if __name__ == '__main__':
     based_url = "https://www.diyifanwen.com/fanwen/laodonghetong/"
-    run(based_url)
-    for url_index in range(2, 20):
-        try:
-            run(based_url + "index_" + str(url_index) + ".html")
-        except Exception:
-            continue
+    save_file_head = "G:/劳动合同"
+    run(based_url, save_file_head)

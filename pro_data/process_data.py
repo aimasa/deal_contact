@@ -9,6 +9,7 @@ from cache import cache
 from tqdm import tqdm
 from docx import Document
 from utils import normal_util, check_utils
+import pickle
 # import gensim
 class process_data(object):
     def __init__(self):
@@ -46,6 +47,7 @@ class process_data(object):
         text = re.sub("\s{2,}", " ", text)
         # text_str = [i for i in text.split(" ")]
         return text
+
 
     def batch_iter(self, batch_size, num_epochs, shuffle=True):
         '''迭代器'''
@@ -131,11 +133,6 @@ class process_data(object):
             # if label is None:
             #     return content
         content_and_label = [document_content, label]
-
-
-
-
-
         return content_and_label
 
     def split_data_file(self, path):

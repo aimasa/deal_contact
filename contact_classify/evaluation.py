@@ -2,9 +2,7 @@ import tensorflow as tf
 import os
 from pro_data import process_data as process
 from contact_classify import normal_param
-
-model_graph_dir = './runs/' + normal_param.model_name + '/checkpoint/model-3200.meta'  # 模型中.meta文件
-
+model_graph_dir = './runs/' + normal_param.model_name + '/checkpoint/model-900.meta'  # 模型中.meta文件
 
 # dict = {"财经":2, "彩票":0, "房产":1}
 def pro_data():
@@ -16,21 +14,6 @@ def pro_data():
     pro.split_data_file(normal_param.dev_path)
     dev_data, dev_label, _ = pro.deal_data(part=len(pro.all_text_path), n_part=0)
     return dev_data, dev_label
-
-
-# def get_array(texts_content):
-#     # list_arr_text = self.deal_text(x_texts)
-#     x_texts = [x for x, label in texts_content]
-#     x_labels = np.array([label for x, label in texts_content])
-#     vocab_processor = learn.preprocessing.VocabularyProcessor(normal_param.max_document_length)
-#     x = np.array(list(vocab_processor.fit_transform(x_texts)))
-#     shuffle_indices = np.random.permutation(np.arange(len(x_labels)))
-#     text_shuffled = x[shuffle_indices]
-#     label_shuffled = x_labels[shuffle_indices]
-#
-#     print(label_shuffled)
-#     pro = process.process_data()
-#     return text_shuffled, pro.dense_to_one_hot(label_shuffled, normal_param.num_class)
 
 
 def test(data_array, one_hot_labels):
@@ -86,11 +69,13 @@ def run():
     # texts_path, texts_label = read_files(path)
     dev_data, dev_label = pro_data()
 
-    return dev_data, dev_label
+    # return dev_data, dev_label
     # 如果单独拿验证集得到预测结果的话，可以把return这句注释掉，然后把下面100-102三行解除注释，运行run
-    # pro, accuracy = test(dev_data, dev_label)
-    # print(pro)
-    # print("this is acc", accuracy)
+    pro, accuracy = test(dev_data, dev_label)
+    print(pro)
+    print("this is acc", accuracy)
+
+
 
 
 if __name__ == "__main__":

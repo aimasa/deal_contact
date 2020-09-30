@@ -93,5 +93,5 @@ def run(first_url,document_path_header):
 if __name__ == "__main__":
     # get_download_url("https:" + "//download.64365.com/contact/default.aspx?id=751812&&type=1",'个人租房合同范本')
     url = "https://www.64365.com/contract/lwht/"
-    file_header = "G:/律师-劳动"
+    file_header = "G:/1"
     run(url,file_header)

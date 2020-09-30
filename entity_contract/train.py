@@ -6,6 +6,7 @@ import torch.optim as optim
 def train(head_path):
     # word_to_ix = creat_vocab(head_path)
     tag_to_ix = predata.build_label(normal_param.labels)
+
     model : BiLSTM_CRF = BiLSTM_CRF(len(word_to_ix), tag_to_ix, normal_param.EMBEDDING_DIM, normal_param.HIDDEN_DIM)
     optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay=1e-4)
     print()
@@ -27,3 +28,6 @@ def train(head_path):
     #         # calling optimizer.step()
     #         loss.backward()
     #         optimizer.step()
+
+if __name__ == '__main__':
+    train("F:/data/contract")

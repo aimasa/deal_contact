@@ -69,28 +69,30 @@ def get_doc_from_html(url):
 
 
 page_url = 'http://www.chinalawedu.com/web/192/page1.shtm'
-total = 0
-print('start ' + str(datetime.datetime.now()))
-for i in range(1, 114):
-    page_url = 'http://www.chinalawedu.com/web/192/page' + str(i) + '.shtm'
-    try:
-        all_data_links = get_data_page_urls(page_url)
-        for link in all_data_links:
-            try:
-                test_url = get_visit_data_url(page_url, link)
-                docx_data, docname = get_doc_from_html(test_url)
-                docname = docname.replace("\\", '_').replace('/', '_').replace("|", '_')
-                docx_data.save(os.path.join('G:/正保法律实务-借款', docname + '.doc'))
-                total = total + 1
-            except Exception as e:
-                print(e)
-                continue
-            if total % 100 == 0:
-                print(str(datetime.datetime.now()) + 'has download ' + str(total))
-    except Exception as e:
-        print(e)
-        continue
-    print('has download page:' + str(i))
+def run(page_url, store_file):
+    total = 0
+    print('start ' + str(datetime.datetime.now()))
+    for i in range(1, 114):
+        page_url = page_url + str(i) + '.shtm'
+        try:
+            all_data_links = get_data_page_urls(page_url)
+            for link in all_data_links:
+                try:
+                    test_url = get_visit_data_url(page_url, link)
+                    docx_data, docname = get_doc_from_html(test_url)
+                    docname = docname.replace("\\", '_').replace('/', '_').replace("|", '_')
+                    # docx_data.save(os.path.join('G:/正保法律实务-借款', docname + '.doc'))
+                    docx_data.save(os.path.join(store_file, docname + '.doc'))
+                    total = total + 1
+                except Exception as e:
+                    print(e)
+                    continue
+                if total % 100 == 0:
+                    print(str(datetime.datetime.now()) + 'has download ' + str(total))
+        except Exception as e:
+            print(e)
+            continue
+        print('has download page:' + str(i))
 
 print('end ' + str(datetime.datetime.now()))
-print('has download ' + str(total))
+

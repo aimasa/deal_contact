@@ -1,78 +1,60 @@
-import progressbar
-import time
-# 先定义一个进度条
-# http://blog.useasp.net/
 
-# pbar = progressbar.ProgressBar(maxval=100,widgets=[progressbar.Bar('=', '[', ']'), ' ',progressbar.Percentage()]).start()
-# for i in range(100):
-#     # 更新进度条
-#     time.sleep(0.1)
-#     pbar.update(i + 1)
-#
-# pbar.finish()
-import re
-#encoding=utf-8
-import math
+import pickle
+from model import LSTM_CRF
 import torch
-from torch.utils.data import Dataset
-import os
+import torch.optim as optim
+from utils import data_change
+EMBEDDING_DIM = 5
+HIDDEN_DIM = 4
+START_TAG = "[CLS]"
+STOP_TAG = "[SEP]"
+EPOCH = 4
+training_data = [(
+    "the wall street journal reported today that apple corporation made money".split(),
+    "B I I I O O O B I O O".split()
+), (
+    "georgia tech is a university in georgia".split(),
+    "B I O O O O B".split()
+)]
 
+word_to_ix = {}
+for sentence, tags in training_data:
+    for word in sentence:
+        if word not in word_to_ix:
+            word_to_ix[word] = len(word_to_ix)
 
-class MyIterableDataset(torch.utils.data.IterableDataset):
-    def __init__(self, start, end):
-        super(MyIterableDataset).__init__()
-        assert end > start, "this example code only works with end >= start"
-        self.start = start
-        self.end = end
+tag_to_ix = {"B": 0, "I": 1, "O": 2, START_TAG: 3, STOP_TAG: 4}
 
-    def __iter__(self):
-        worker_info = torch.utils.data.get_worker_info()
-        if worker_info is None:  # single-process data loading, return the full iterator
-            iter_start = self.start
-            iter_end = self.end
-        else:  # in a worker process
-             # split workload
-             per_worker = int(math.ceil((self.end - self.start) / float(worker_info.num_workers)))
-             worker_id = worker_info.id
-             iter_start = self.start + worker_id * per_worker
-             iter_end = min(iter_start + per_worker, self.end)
-        print("一次性迭代：\n")
-        return iter(iterate_data(iter_start, 178945))
+model = LSTM_CRF.BiLSTM_CRF(len(word_to_ix), tag_to_ix, EMBEDDING_DIM, HIDDEN_DIM)
+optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay=1e-4)
 
-# def read_file(path):
-#
-def iterate_data(head_path, ech_size):
-    print("迭代次数")
-    count = 10
-    iter_start = 0
-    char_tst = 0
-    iter_end = ech_size
-    list = []
-    for i in range(178945):
-        list.append(i)
+# Check predictions before training
+with torch.no_grad():
+    precheck_sent = torch.tensor(data_change.prepare_sequence(training_data[0][0], word_to_ix), dtype=torch.long)
+    precheck_tags = torch.tensor([tag_to_ix[t] for t in training_data[0][1]], dtype=torch.long)
+    print(model(precheck_sent))
 
-    while True:
-        result = list[iter_start : iter_start + 128]
-        iter_start += 128
-        char_tst += 1
+# Make sure prepare_sequence from earlier in the LSTM section is loaded
+for epoch in range(300):  # again, normally you would NOT do 300 epochs, it is toy data
+    for sentence, tags in training_data:
+        # Step 1. Remember that Pytorch accumulates gradients.
+        # We need to clear them out before each instance
+        model.zero_grad()
 
-        if iter_start >= iter_end:
-            break
-        yield result, char_tst
+        # Step 2. Get our inputs ready for the network, that is,
+        # turn them into Tensors of word indices.
+        sentence_in = torch.tensor(LSTM_CRF.prepare_sequence(sentence, word_to_ix), dtype=torch.long)
+        targets = torch.tensor([tag_to_ix[t] for t in tags], dtype=torch.long)
 
+        # Step 3. Run our forward pass.
+        loss = model.neg_log_likelihood(sentence_in, targets)
 
-# def read_paths(paths):
-#     for path in paths:
+        # Step 4. Compute the loss, gradients, and update the parameters by
+        # calling optimizer.step()
+        loss.backward()
+        optimizer.step()
 
-
-
-# def read_txt(label_path, txt_path):
-
-
-
- # should give same set of data as range(3, 7), i.e., [3, 4, 5, 6].
-ds = MyIterableDataset(start=3, end=79)
-now = time.time()
-labels = torch.utils.data.DataLoader(ds, num_workers=0, batch_size=128)
-print(list(labels))
-print("\n", time.time() - now)
+# Check predictions after training
+with torch.no_grad():
+    precheck_sent = torch.tensor(LSTM_CRF.prepare_sequence(training_data[0][0], word_to_ix), dtype=torch.long)
+    print(model(precheck_sent))
