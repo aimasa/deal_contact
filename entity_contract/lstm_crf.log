@@ -1,0 +1,33 @@
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_1 (Embedding)      (None, 7948, 128)         119040    
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 7948, 128)         0         
+_________________________________________________________________
+bidirectional_1 (Bidirection (None, 7948, 400)         526400    
+_________________________________________________________________
+time_distributed_1 (TimeDist (None, 7948, 32)          12832     
+_________________________________________________________________
+crf_1 (CRF)                  (None, 7948, 32)          2144      
+=================================================================
+Total params: 660,416
+Trainable params: 660,416
+Non-trainable params: 0
+_________________________________________________________________
+D:\Anaconda3\envs\deal_contact_new_env\lib\site-packages\keras_contrib\layers\crf.py:346: UserWarning: CRF.loss_function is deprecated and it might be removed in the future. Please use losses.crf_loss instead.
+  warnings.warn('CRF.loss_function is deprecated '
+D:\Anaconda3\envs\deal_contact_new_env\lib\site-packages\keras_contrib\layers\crf.py:353: UserWarning: CRF.accuracy is deprecated and it might be removed in the future. Please use metrics.crf_accuracy
+  warnings.warn('CRF.accuracy is deprecated and it '
+Train on 84 samples, validate on 8 samples
+Epoch 1/30
+
+18/84 [=====>........................] - ETA: 2:41 - loss: 3.5174 - crf_viterbi_accuracy: 1.1184e-04
+36/84 [===========>..................] - ETA: 1:52 - loss: 3.4708 - crf_viterbi_accuracy: 1.3281e-04
+54/84 [==================>...........] - ETA: 1:08 - loss: 3.4178 - crf_viterbi_accuracy: 1.9572e-04
+72/84 [========================>.....] - ETA: 27s - loss: 3.3437 - crf_viterbi_accuracy: 0.1590     
+84/84 [==============================] - 209s 2s/step - loss: 3.2731 - crf_viterbi_accuracy: 0.2300 - val_loss: 2.0822 - val_crf_viterbi_accuracy: 0.8375
+Epoch 2/30
+
+18/84 [=====>........................] - ETA: 2:27 - loss: 2.3044 - crf_viterbi_accuracy: 0.7011

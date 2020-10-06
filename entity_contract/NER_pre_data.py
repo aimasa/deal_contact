@@ -7,7 +7,8 @@ import os
 from entity_contract import normal_param
 from torch.utils.data import Dataset
 from utils import normal_util, data_change
-
+import time
+import tqdm
 import math
 import random
 from torch.utils.data import DataLoader
@@ -16,124 +17,30 @@ HIDDEN_DIM = 4
 START_TAG = "[CLS]"
 STOP_TAG = "[SEP]"
 PAD_TAG = "[PAD]"
-EPOCH = 4
+
 tag_to_ix = {}
 vocab = {}
 ech_size = 100
-batch_size = 2
+# batch_size = 2
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-# Make up some training data
-# training_data = [(
-#     "the wall street journal reported today that apple corporation made money".split(),
-#     "B I I I O O O B I O O".split()
-# ), (
-#     "georgia tech is a university in georgia".split(),
-#     "B I O O O O B".split()
-# )]
-#
-# word_to_ix = {}
-# for sentence, tags in training_data:
-#     for word in sentence:
-#         if word not in word_to_ix:
-#             word_to_ix[word] = len(word_to_ix)
-#
-# tag_to_ix = {"B": 0, "I": 1, "O": 2, START_TAG: 3, STOP_TAG: 4}
-#
-# model = LSTM_CRF.BiLSTM_CRF(len(word_to_ix), tag_to_ix, EMBEDDING_DIM, HIDDEN_DIM)
-# optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay=1e-4)
-#
-# # Check predictions before training
-# with torch.no_grad():
-#     precheck_sent = LSTM_CRF.prepare_sequence(training_data[0][0], word_to_ix)
-#     precheck_tags = torch.tensor([tag_to_ix[t] for t in training_data[0][1]], dtype=torch.long)
-#     print(model(precheck_sent))
-#
-# # Make sure prepare_sequence from earlier in the LSTM section is loaded
-# for epoch in range(300):  # again, normally you would NOT do 300 epochs, it is toy data
-#     for sentence, tags in training_data:
-#         # Step 1. Remember that Pytorch accumulates gradients.
-#         # We need to clear them out before each instance
-#         model.zero_grad()
-#
-#         # Step 2. Get our inputs ready for the network, that is,
-#         # turn them into Tensors of word indices.
-#         sentence_in = LSTM_CRF.prepare_sequence(sentence, word_to_ix)
-#         targets = torch.tensor([tag_to_ix[t] for t in tags], dtype=torch.long)
-#
-#         # Step 3. Run our forward pass.
-#         loss = model.neg_log_likelihood(sentence_in, targets)
-#
-#         # Step 4. Compute the loss, gradients, and update the parameters by
-#         # calling optimizer.step()
-#         loss.backward()
-#         optimizer.step()
-#
-# # Check predictions after training
-# with torch.no_grad():
-#     precheck_sent = LSTM_CRF.prepare_sequence(training_data[0][0], word_to_ix)
-#     print(model(precheck_sent))
-# # We got it!
-# 1、词组对应转换成index
-# 2、标签转换成对应的one-hot格式
-# 3、用以上数据初始化模型
-# 4、把句子转换成下标形式，并将数据喂进模型
+with open("vocab.pkl", 'rb') as f:
+    vocab = pickle.load(f)
 
-import argparse
-
-
-parser = argparse.ArgumentParser(description='LSTM_CRF')
-parser.add_argument('--epochs', type=int, default=32,
-                    help='number of epochs for train')
-parser.add_argument('--batch-size', type=int, default=64,
-                    help='batch size for training')
-parser.add_argument('--seed', type=int, default=1111,
-                    help='random seed')
-parser.add_argument('--use-cuda', action='store_true',
-                    help='enables cuda')
-parser.add_argument('--lr', type=float, default=0.001,
-                    help='learning rate')
-parser.add_argument('--use-crf', action='store_true',
-                    help='use crf')
-
-parser.add_argument('--mode', type=str, default='train',
-                    help='train mode or test mode')
-
-parser.add_argument('--save', type=str, default='./checkpoints/lstm_crf.pth',
-                    help='path to save the final model')
-parser.add_argument('--save-epoch', action='store_true',
-                    help='save every epoch')
-parser.add_argument('--data', type=str, default='dataset',
-                    help='location of the data corpus')
-
-parser.add_argument('--word-ebd-dim', type=int, default=300,
-                    help='number of word embedding dimension')
-parser.add_argument('--dropout', type=float, default=0.5,
-                    help='the probability for dropout')
-parser.add_argument('--lstm-hsz', type=int, default=300,
-                    help='BiLSTM hidden size')
-parser.add_argument('--lstm-layers', type=int, default=2,
-                    help='biLSTM layer numbers')
-parser.add_argument('--l2', type=float, default=0.005,
-                    help='l2 regularization')
-parser.add_argument('--clip', type=float, default=.5,
-                    help='gradient clipping')
-parser.add_argument('--result-path', type=str, default='./result',
-                    help='result-path')
-
-args = parser.parse_args()
 
 def build_label(labels):
+    if len(tag_to_ix) > 0 : return tag_to_ix
     '''根据已有的label构建标签
     :param labels 已有标签种类
     :return tag_to_index dic 加上边界标记符组成的字典[key : 加上边界标记符的标签, value : 标签对应的下标]'''
-    tag_heads = {'B', 'I', 'E', 'S'}
-    last_index = 0
+    tag_heads = ['B', 'I', 'E', 'S']
+    labs = ["O", START_TAG, STOP_TAG, PAD_TAG]
     for label in labels:
         for tag_head in tag_heads:
             tag = '%s-%s' % (tag_head, label)
-            tag_to_ix[tag] = last_index
-            last_index += 1
-    special_tag(tag_to_ix)
+            tag_to_ix[tag] = len(tag_to_ix)
+    for lab in labs:
+        tag_to_ix[lab] = len(tag_to_ix)
+
     return tag_to_ix
 
 def special_tag(tag_to_ix):
@@ -230,75 +137,37 @@ def split(content):
     content = " ".join(jieba.cut(content))
     return content
 
-def train(model, optimizer, train_data):
-
-    # word_to_ix = creat_vocab(head_path)
-
-    model.train()
-    total_loss = 0
-
-    for txts, labels, length  in train_data:
-        optimizer.zero_grad()
-        # arrys, length = data_change.prepare_sequence(txts, vocab)
-        # sentence_in = torch.tensor(arrys, dtype=torch.long)
-        # targets = torch.tensor(data_change.prepare_label(labels, tag_to_ix), dtype=torch.long)
-        loss, _ = model(txts.squeeze(0).long().cuda(), labels.squeeze(0).long().cuda(), torch.as_tensor(length.cpu(), dtype=torch.int64).squeeze(0))
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.detach()
-    return total_loss / train_data._stop_step
-
-def evaluate(model, test_data):
-    model.eval()
-
-
-    # for epoch in range(300):  # again, normally you would NOT do 300 epochs, it is toy data
-    #     for sentence, tags in training_data:
-    #         # Step 1. Remember that Pytorch accumulates gradients.
-    #         # We need to clear them out before each instance
-    #         model.zero_grad()
-    #
-    #         # Step 2. Get our inputs ready for the network, that is,
-    #         # turn them into Tensors of word indices.
-    #         sentence_in = LSTM_CRF.prepare_sequence(sentence, word_to_ix)
-    #     #         targets = torch.tensor([tag_to_ix[t] for t in tags], dtype=torch.long)
-    #
-    #         # Step 3. Run our forward pass.
-    #         loss = model.neg_log_likelihood(sentence_in, targets)
-    #
-    #         # Step 4. Compute the loss, gradients, and update the parameters by
-    #         # calling optimizer.step()
-    #         loss.backward()
-    #         optimizer.step()
-
-class MyIterableDataset(torch.utils.data.IterableDataset):
-
-    def __init__(self, head_path, ech_size, batch_size, vocab):
-        super(MyIterableDataset).__init__()
-        # assert end > start, "this example code only works with end >= start"
-        self.head_path = head_path
-        self.ech_size = ech_size
-        self.batch_size = batch_size
-        self.vocab = vocab
-
-    def __iter__(self):
-        # worker_info = torch.utils.data.get_worker_info()
-        # if worker_info is None:  # single-process data loading, return the full iterator
-        iter_head_path = self.head_path
-        iter_ech_size = self.ech_size
-        batch_size = self.batch_size
-        # else:  # in a worker process
-        #      # split workload
-        #     # per_worker = int(math.ceil((self.end - self.start) / float(worker_info.num_workers)))
-        #     worker_id = worker_info.id
-        #     # iter_start = self.iter_ech_size + worker_id * per_worker
-        #     iter_end = min(iter_start + per_worker, self.end)
-        #     batch_size = self.batch_size
-        print("一次性迭代：\n")
-        return iter(iterate_data(iter_head_path, iter_ech_size, batch_size, self.vocab))
-
-# def read_file(path):
+# class MyIterableDataset(torch.utils.data.IterableDataset):
 #
+#     def __init__(self, label_paths, txt_paths, ech_size, batch_size, vocab, is_train = True):
+#         super(MyIterableDataset).__init__()
+#         # assert end > start, "this example code only works with end >= start"
+#         self.ech_size = ech_size
+#         self.batch_size = batch_size
+#         self.vocab = vocab
+#         self.label_paths = label_paths
+#         self.txt_paths = txt_paths
+#         self.is_train = is_train
+#
+#     def __iter__(self):
+#         # worker_info = torch.utils.data.get_worker_info()
+#         # if worker_info is None:  # single-process data loading, return the full iterator
+#         iter_txt_path = self.txt_paths
+#         iter_label_path = self.label_paths
+#         iter_ech_size = self.ech_size
+#         batch_size = self.batch_size
+#         # else:  # in a worker process
+#         #      # split workload
+#         #     # per_worker = int(math.ceil((self.end - self.start) / float(worker_info.num_workers)))
+#         #     worker_id = worker_info.id
+#         #     # iter_start = self.iter_ech_size + worker_id * per_worker
+#         #     iter_end = min(iter_start + per_worker, self.end)
+#         #     batch_size = self.batch_size
+#         print("一次性迭代：\n")
+#         return iter(iterate_data(iter_txt_path, iter_label_path, iter_ech_size, batch_size, self.vocab, self.is_train))
+#
+# # def read_file(path):
+# #
 def concat_path(head_path):
     '''
     通过拼接路径得到相应的路径名称
@@ -313,63 +182,182 @@ def concat_path(head_path):
     random.shuffle(index)
     new_label_path = [label_paths[i] for i in index]
     new_txt_paths = [txt_paths[i] for i in index]
-    return new_label_path, new_txt_paths
+    return new_label_path, new_txt_paths, index
 
-
-
-def iterate_data(head_path, ech_size, batch_size, vocab):
-    '''
-    迭代器，边读取ech_size个文件，边返回batch_size大小的tensor
-    :param head_path: txt和label的头路径
-    :param ech_size: 一次性读取的文件个数
-    :param batch_size: 训练批次大小
-    :return: label的tensor和txt的tensor
-    '''
-    label_paths, txt_paths = concat_path(head_path)
-
-    iter_start = 0
-
-    read_index_start = 0
-    read_index_end = len(label_paths) - 1
-    while True:
-        next_index = min(read_index_end, read_index_start + ech_size)
-        read_txt_paths = txt_paths[read_index_start: next_index]
-        read_label_path = label_paths[read_index_start: next_index]
-        txts, labels = load_data(read_label_path, read_txt_paths)
-        # length = len(txts)
-        # indexs = [i for i in range(length)]
-        # random.shuffle(indexs)
-        # txts = [txts[i] for i in indexs]
-        # labels = [labels[i] for i in indexs]
-        iter_end = len(txts) - 1
-        while True:
-            next_iter_index = iter_start + batch_size
-            part_txts = txts[iter_start : next_iter_index]
-            part_labels = labels[iter_start : next_iter_index]
-            arrys, length, max_length = data_change.prepare_sequence(part_txts, vocab)
-            targets = data_change.prepare_label(part_labels, tag_to_ix, max_length)
-            if iter_start >= iter_end:
-                break
-            # yield torch.tensor(arrys, dtype=torch.long), torch.tensor(targets, dtype=torch.long), torch.tensor(length, dtype=torch.long)
-            yield arrys, targets,  length
-        if next_index >= read_index_end:
-            break
-
-def run(head_path):
-    with open("vocab.pkl", 'rb') as f:
-        vocab = pickle.load(f)
-
-    tag_to_ix = build_label(normal_param.labels)
-    model : LSTM_CRF.Model = LSTM_CRF.Model(len(vocab), 300, 300, 1, normal_param.dropout1, normal_param.batch_size, len(tag_to_ix), tag_to_ix)
-    # word_size, word_ebd_dim, lstm_hsz, lstm_layers, dropout, batch_size, label_size, use_cuda = True
-    # model:BERT_LSTM_CRF.BERT_LSTM_CRF = BERT_LSTM_CRF.BERT_LSTM_CRF(normal_param.bert_path, len(tag_to_ix), EMBEDDING_DIM, HIDDEN_DIM, 1, 0.5, 0.5, use_cuda=True)
-    model.cuda()
-    optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay=1e-4)
-
-    train_data = DataLoader(dataset=MyIterableDataset(head_path, ech_size, batch_size, vocab), shuffle=False)
-
-if __name__ == '__main__':
-    # build_label(labels)
-    # split("他已经有五个月没有回来了", "F:/phython workspace/deal_contact/script/txt_process/dic_word.txt")
-    train("F:/data/test/pred_contant")
-    # load_data(label_path, txt_path)
+#
+#
+# def iterate_data(iter_txt_path, iter_label_path, ech_size, batch_size, vocab, is_train):
+#     '''
+#     迭代器，边读取ech_size个文件，边返回batch_size大小的tensor
+#     :param head_path: txt和label的头路径
+#     :param ech_size: 一次性读取的文件个数
+#     :param batch_size: 训练批次大小
+#     :return: label的tensor和txt的tensor
+#     '''
+#
+#
+#     iter_start = 0
+#     content_length = len(label_paths)
+#     read_index_start = 0
+#     read_index_end = len(label_paths) - 1
+#     while True:
+#         next_index = min(read_index_end, read_index_start + ech_size)
+#         read_txt_paths = iter_txt_path[read_index_start: next_index]
+#         read_label_path = iter_label_path[read_index_start: next_index]
+#         read_index_start = next_index
+#         txts, labels = load_data(read_label_path, read_txt_paths)
+#         # length = len(txts)
+#         # indexs = [i for i in range(length)]
+#         # random.shuffle(indexs)
+#         # txts = [txts[i] for i in indexs]
+#         # labels = [labels[i] for i in indexs]
+#         iter_end = len(txts)
+#         while True:
+#             next_iter_index = min((iter_start + batch_size), iter_end)
+#             part_txts = txts[iter_start : next_iter_index]
+#             part_labels = labels[iter_start : next_iter_index]
+#             iter_start = next_iter_index
+#             arrys, length, max_length = data_change.prepare_sequence(part_txts, vocab)
+#             targets = data_change.prepare_label(part_labels, tag_to_ix, max_length)
+#             if iter_start >= iter_end:
+#                 break
+#             # yield torch.tensor(arrys, dtype=torch.long), torch.tensor(targets, dtype=torch.long), torch.tensor(length, dtype=torch.long)
+#             if is_train:
+#                 yield torch.from_numpy(arrys), torch.from_numpy(targets), length
+#             else:
+#                 yield torch.from_numpy(arrys), torch.from_numpy(targets),  length, part_txts, part_labels, content_length
+#         if read_index_start >= read_index_end:
+#             break
+#
+# # tag_to_ix = build_label(normal_param.labels)
+# # model: LSTM_CRF.Model = LSTM_CRF.Model(len(vocab), 300, 300, 1, normal_param.dropout1, normal_param.batch_size,
+# #                                        len(tag_to_ix), tag_to_ix)
+# # # word_size, word_ebd_dim, lstm_hsz, lstm_layers, dropout, batch_size, label_size, use_cuda = True
+# # # model:BERT_LSTM_CRF.BERT_LSTM_CRF = BERT_LSTM_CRF.BERT_LSTM_CRF(normal_param.bert_path, len(tag_to_ix), EMBEDDING_DIM, HIDDEN_DIM, 1, 0.5, 0.5, use_cuda=True)
+# # model.cuda()
+# # optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay=1e-4)
+# # label_paths, txt_paths, _ = concat_path(normal_param.head_path)
+# # dev_label_paths, dev_txt_path, unsort_idx = concat_path(normal_param.head_test_path)
+# # train_data = DataLoader(dataset=MyIterableDataset(label_paths, txt_paths, ech_size, normal_param.batch_size, vocab), shuffle=False)
+# # test_data = DataLoader(dataset=MyIterableDataset(dev_label_paths, dev_txt_path, ech_size, normal_param.batch_size, vocab, is_train=False),
+# #                        shuffle=False)
+#
+# def train():
+#
+#     model.train()
+#     total_loss = 0
+#     num = 0
+#     for txts, labels, length  in train_data:
+#         optimizer.zero_grad()
+#         cor_time = time.time()
+#         # arrys, length = data_change.prepare_sequence(txts, vocab)
+#         # sentence_in = torch.tensor(arrys, dtype=torch.long)
+#         # targets = torch.tensor(data_change.prepare_label(labels, tag_to_ix), dtype=torch.long)
+#         loss, _ = model(txts.squeeze(0).long().cuda(), labels.squeeze(0).long().cuda(), torch.as_tensor(length.cpu(), dtype=torch.int64).squeeze(0))
+#         print("训练次数：", num, loss, "spend time", cor_time - time.time())
+#         num = num + 1
+#         loss.backward()
+#         optimizer.step()
+#         total_loss += loss.detach()
+#     return total_loss / (len(txt_paths)//normal_param.batch_size)
+#
+# def evaluate():
+#     model.eval()
+#     label_list = []
+#     eval_loss = 0
+#     model_predict = []
+#     for txts, labels, length, txts_part, labels_part in test_data:
+#         loss, _ = model(txts.squeeze(0).long().cuda(), labels.squeeze(0).long().cuda(), torch.as_tensor(length.cpu(), dtype=torch.int64).squeeze(0))
+#         pred = model.predict(txts, length)
+#         pred = pred[unsort_idx]
+#         seq_lengths = length[unsort_idx]
+#
+#         for i, seq_len in enumerate(seq_lengths.cpu().numpy()):
+#             pred_ = list(pred[i][:seq_len].cpu().numpy())
+#             label_list.append(pred_)
+#
+#         eval_loss += loss.detach().item()
+#         for label_, sent, tag in zip(label_list, txts_part, labels_part):
+#             tag_ = [tag_to_ix[label__] for label__ in label_]
+#             sent_res = []
+#             if len(label_) != len(sent):
+#                 # print(sent)
+#                 print(len(sent))
+#                 print(len(label_))
+#                 # print(tag)
+#             for i in range(len(sent)):
+#                 sent_res.append([sent[i], tag[i], tag_[i]])
+#             model_predict.append(sent_res)
+#
+#         label_path = os.path.join(normal_param.result_path, 'label_' + str(normal_param.EPOCH))
+#         metric_path = os.path.join(normal_param.result_path, 'result_metric_' + str(normal_param.EPOCH))
+#
+#         for line in conlleval(model_predict, label_path, metric_path):
+#             print(line)
+#
+#         return eval_loss / (len(dev_txt_path)//normal_param.batch_size)
+# import os
+#
+# def conlleval(label_predict, label_path, metric_path):
+#     """
+#     :param label_predict:
+#     :param label_path:
+#     :param metric_path:
+#     :return:
+#     """
+#     eval_perl = "./conlleval_rev.pl"
+#     with open(label_path, "w") as fw:
+#         line = []
+#         for sent_result in label_predict:
+#             for char, tag, tag_ in sent_result:
+#                 tag = '0' if tag == 'O' else tag
+#                 char = char.encode("utf-8")
+#                 line.append("{} {} {}\n".format(char, tag, tag_))
+#             line.append("\n")
+#         fw.writelines(line)
+#     os.system("perl {} < {} > {}".format(eval_perl, label_path, metric_path))
+#     with open(metric_path) as fr:
+#         metrics = [line.strip() for line in fr]
+#     return metrics
+#     # for epoch in range(300):  # again, normally you would NOT do 300 epochs, it is toy data
+#     #     for sentence, tags in training_data:
+#     #         # Step 1. Remember that Pytorch accumulates gradients.
+#     #         # We need to clear them out before each instance
+#     #         model.zero_grad()
+#     #
+#     #         # Step 2. Get our inputs ready for the network, that is,
+#     #         # turn them into Tensors of word indices.
+#     #         sentence_in = LSTM_CRF.prepare_sequence(sentence, word_to_ix)
+#     #     #         targets = torch.tensor([tag_to_ix[t] for t in tags], dtype=torch.long)
+#     #
+#     #         # Step 3. Run our forward pass.
+#     #         loss = model.neg_log_likelihood(sentence_in, targets)
+#     #
+#     #         # Step 4. Compute the loss, gradients, and update the parameters by
+#     #         # calling optimizer.step()
+#     #         loss.backward()
+#     #         optimizer.step()
+#
+# def run(is_train = True):
+#
+#     train_loss = []
+#     if is_train:
+#         total_start_time = time.time()
+#
+#         print('-' * 90)
+#         for epoch in range(1, normal_param.EPOCH + 1):
+#             epoch_start_time = time.time()
+#             loss = train()
+#             train_loss.append(loss * 1000.)
+#
+#             print('| start of epoch {:3d} | time: {:2.2f}s | loss {:5.6f}'.format(
+#                 epoch, time.time() - epoch_start_time, loss))
+#             eval_loss = evaluate()
+#             print("eval_loss: ", eval_loss)
+#             torch.save(model.state_dict(), normal_param.save_path)
+#
+# if __name__ == '__main__':
+#     # build_label(labels)
+#     # split("他已经有五个月没有回来了", "F:/phython workspace/deal_contact/script/txt_process/dic_word.txt")
+#     run()
+#     # load_data(label_path, txt_path)

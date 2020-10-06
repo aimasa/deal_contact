@@ -3,7 +3,7 @@ import os
 import datetime
 from utils import check_utils
 import re
-
+import pickle
 def copy_move(src_path, dest_path):
     '''
     :param src_path 源文件
@@ -78,3 +78,12 @@ def get_doc_file(path):
             files.append(path + file)
     return files
 
+def read_vocab(vocab_path):
+    '''
+    读取词表内容
+    :param vocab_path: 词表路径
+    :return: 词表dic文件
+    '''
+    with open(vocab_path, 'rb') as f:
+        vocab = pickle.load(f)
+    return vocab
