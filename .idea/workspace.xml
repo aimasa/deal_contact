@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
-      <change afterPath="$PROJECT_DIR$/entity_contract/NERInference.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity_contract/a.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity_contract/checkpoints/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity_contract/lstm_crf.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/keras_LSTM_CRF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/NER_pre_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/NER_pre_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/normal_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/normal_param.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/data_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_change.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/normal_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normal_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_contract/checkpoints/lstm_crf.h5py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/checkpoints/lstm_crf.h5py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_contract/lstm_crf.log" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/lstm_crf.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,34 +33,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity_contract/NER_pre_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="184" column="42" selection-start-line="184" selection-start-column="42" selection-end-line="184" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/data_change.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity_contract/process_data_for_keras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="248">
+              <caret line="82" column="38" lean-forward="true" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -76,9 +44,37 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entity_contract/NERInference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/keras_BILSTM_CEF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity_contract/lstm_crf.log">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -176,11 +172,11 @@
         <option value="$PROJECT_DIR$/utils/data_change.py" />
         <option value="$PROJECT_DIR$/utils/normal_util.py" />
         <option value="$PROJECT_DIR$/entity_contract/NERInference.py" />
-        <option value="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" />
         <option value="$PROJECT_DIR$/entity_contract/normal_param.py" />
-        <option value="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" />
         <option value="$PROJECT_DIR$/entity_contract/NER_pre_data.py" />
         <option value="$PROJECT_DIR$/entity_contract/lstm_crf.log" />
+        <option value="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" />
+        <option value="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" />
       </list>
     </option>
   </component>
@@ -277,28 +273,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.process_data_for_keras">
-    <configuration name="LSTM_CRF" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deal_contact" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/LSTM_CRF.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="NER_pre_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deal_contact" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -335,6 +309,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/data_change.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="keras_BILSTM_CEF" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deal_contact" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -390,10 +386,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.process_data_for_keras" />
+        <item itemvalue="Python.keras_BILSTM_CEF" />
         <item itemvalue="Python.NER_pre_data" />
         <item itemvalue="Python.keras_LSTM_CEF" />
         <item itemvalue="Python.data_change" />
-        <item itemvalue="Python.LSTM_CRF" />
       </list>
     </recent_temporary>
   </component>
@@ -463,7 +459,7 @@
       <workItem from="1597840040753" duration="1882000" />
       <workItem from="1600649981590" duration="82449000" />
       <workItem from="1601196260950" duration="35728000" />
-      <workItem from="1601365728773" duration="92259000" />
+      <workItem from="1601365728773" duration="109591000" />
     </task>
     <task id="LOCAL-00001" summary="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
       <created>1584520442931</created>
@@ -476,7 +472,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="790447000" />
+    <option name="totallyTimeSpent" value="807779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,8 +492,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32729805" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37325907" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3941504" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35376045" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3941504" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32962137" />
@@ -514,7 +510,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.2062982" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.2062982" />
       <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
     </layout>
   </component>
@@ -578,11 +574,6 @@
           <line>45</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/entity_contract/NERInference.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="148" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -596,6 +587,7 @@
       <configuration name="PythonConfigurationType">
         <watch expression="len(tag_to_ix)" language="Python" />
         <watch expression="label_to_ix" language="Python" />
+        <watch expression="self.model.predict(padded)" />
       </configuration>
     </watches-manager>
   </component>
@@ -614,13 +606,14 @@
     <SUITE FILE_PATH="coverage/deal_contact$NER_pre_data.coverage" NAME="NER_pre_data Coverage Results" MODIFIED="1601547699214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entity_contract" />
     <SUITE FILE_PATH="coverage/deal_contact$keras_LSTM_CEF.coverage" NAME="keras_LSTM_CEF Coverage Results" MODIFIED="1601543676535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/deal_contact$move_head.coverage" NAME="move_head Coverage Results" MODIFIED="1579072323353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/deal_docx" />
+    <SUITE FILE_PATH="coverage/deal_contact$keras_BILSTM_CEF.coverage" NAME="keras_BILSTM_CEF Coverage Results" MODIFIED="1601985707863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/deal_contact$test_jiagu.coverage" NAME="test_jiagu Coverage Results" MODIFIED="1580556517950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_script" />
     <SUITE FILE_PATH="coverage/deal_contact$deal_doc.coverage" NAME="deal_doc Coverage Results" MODIFIED="1578561560100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deal_docx" />
     <SUITE FILE_PATH="coverage/deal_contact$process_data.coverage" NAME="process_data Coverage Results" MODIFIED="1597058592087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pro_data" />
     <SUITE FILE_PATH="coverage/deal_contact$split_content_and_label.coverage" NAME="split_content_and_label Coverage Results" MODIFIED="1593008153236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/txt_process" />
     <SUITE FILE_PATH="coverage/deal_contact$train.coverage" NAME="train Coverage Results" MODIFIED="1597058635311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contact_classify" />
     <SUITE FILE_PATH="coverage/deal_contact$evaluation.coverage" NAME="evaluation Coverage Results" MODIFIED="1597630838301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/contact_classify" />
-    <SUITE FILE_PATH="coverage/deal_contact$process_data_for_keras.coverage" NAME="process_data_for_keras Coverage Results" MODIFIED="1601974277746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entity_contract" />
+    <SUITE FILE_PATH="coverage/deal_contact$process_data_for_keras.coverage" NAME="process_data_for_keras Coverage Results" MODIFIED="1601992456082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entity_contract" />
     <SUITE FILE_PATH="coverage/deal_contact$train_and_test.coverage" NAME="train_and_test Coverage Results" MODIFIED="1579074598406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/split_files_in_dir" />
     <SUITE FILE_PATH="coverage/deal_contact$test_classfiy.coverage" NAME="test_classfiy Coverage Results" MODIFIED="1579139369356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_script" />
     <SUITE FILE_PATH="coverage/deal_contact$test_play.coverage" NAME="test_play Coverage Results" MODIFIED="1582888374435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_script" />
@@ -689,36 +682,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/LSTM.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/tensorflow/python/framework/dtypes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="517" column="48" lean-forward="true" selection-start-line="517" selection-start-column="48" selection-end-line="517" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spyder/www_chinalawedu_com.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spyder/www_64365_com.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
@@ -808,16 +771,6 @@
     <entry file="file://$PROJECT_DIR$/bert/vocab.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/BERT_LSTM_CRF.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="34" />
-          <folding>
-            <element signature="e#30#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_script/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -835,13 +788,6 @@
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
         </state>
       </provider>
     </entry>
@@ -963,13 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras_contrib/layers/crf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="197" column="30" selection-start-line="197" selection-start-column="17" selection-end-line="197" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/keras_LSTM_CRF.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1014,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1137">
-          <caret line="1355" column="37" selection-start-line="1355" selection-start-column="37" selection-end-line="1355" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/normal_util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1034,43 +966,6 @@
     <entry file="file://$PROJECT_DIR$/entity_contract/a.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/load_vocab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="48" column="66" lean-forward="true" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/keras_BILSTM_CEF.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/normal_param.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/NERInference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/data_change.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1081,28 +976,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras_contrib/metrics/crf_accuracies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/sklearn/metrics/_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2710">
+          <caret line="1274" column="4" selection-start-line="1274" selection-start-column="4" selection-end-line="1274" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras_contrib/layers/crf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="356" column="29" selection-start-line="356" selection-start-column="29" selection-end-line="356" selection-end-column="29" />
+          <folding>
+            <element signature="e#538#8513#1" />
+            <element signature="e#10884#13019#0" />
+            <element signature="e#13063#13801#0" />
+            <element signature="e#13860#13898#0" />
+            <element signature="e#13954#14063#0" />
+            <element signature="e#14099#15637#0" />
+            <element signature="e#15690#15887#0" />
+            <element signature="e#16285#16496#0" />
+            <element signature="e#16548#16763#0" />
+            <element signature="e#16822#16975#0" />
+            <element signature="e#17036#17136#0" />
+            <element signature="e#17198#17299#0" />
+            <element signature="e#17370#18102#0" />
+            <element signature="e#18188#18489#0" />
+            <element signature="e#18553#19271#0" />
+            <element signature="e#19341#20295#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_contract/normal_param.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="453" selection-start-line="453" selection-end-line="453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras/engine/training_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="427" selection-start-line="427" selection-end-line="427" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_contract/load_vocab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras/backend/tensorflow_backend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="977" column="12" selection-start-line="977" selection-start-column="12" selection-end-line="977" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/entity_contract/NER_pre_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="184" column="42" selection-start-line="184" selection-start-column="42" selection-end-line="184" selection-end-column="42" />
+        <state relative-caret-position="-3825">
+          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/BERT_LSTM_CRF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1075">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="34" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#30#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_contract/lstm_crf.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/entity_contract/process_data_for_keras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="248">
+          <caret line="82" column="38" lean-forward="true" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/lstm_crf.log">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/entity_contract/NERInference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/keras_BILSTM_CEF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

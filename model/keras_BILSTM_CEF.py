@@ -7,13 +7,14 @@ from keras.layers import TimeDistributed
 from keras.layers import Dropout
 from keras_contrib.layers.crf import CRF
 from keras_contrib.utils import save_load_utils
-
+import keras.backend as K
+from sklearn.metrics import precision_recall_fscore_support as score
 
 VOCAB_SIZE = 2500
 EMBEDDING_OUT_DIM = 128
 TIME_STAMPS = 100
 HIDDEN_UNITS = 200
-DROPOUT_RATE = 0.5
+DROPOUT_RATE = 0.2
 NUM_CLASS = 5
 
 
@@ -32,7 +33,11 @@ def build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
     crf_layer = CRF(NUM_CLASS, sparse_target=True)
     model.add(crf_layer)
     model.summary()
-    model.compile('adam', loss=crf_layer.loss_function, metrics=[crf_layer.accuracy])
+    model.compile('adam', loss=crf_layer.loss_function,
+                    metrics=[
+                        crf_layer.accuracy,
+                        f1_m
+                    ])
     return model
 
 def save_embedding_bilstm2_crf_model(model, filename):
@@ -42,3 +47,26 @@ def load_embedding_bilstm2_crf_model(filename, VOCAB_SIZE, NUM_CLASS, TIME_STAMP
     model = build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS)
     save_load_utils.load_all_weights(model, filename, include_optimizer=False)
     return model
+
+def recall_m(y_true, y_pred):
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
+    recall = true_positives / (possible_positives + K.epsilon())
+    return recall
+
+def precision_m(y_true, y_pred):
+    true_positives = K.sum(K.round(K.cast(K.equal(y_true, y_pred), 'float32')))
+    predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
+    precision = true_positives / (predicted_positives + K.epsilon())
+    return precision
+
+def f1_m(y_true, y_pred):
+    recall = K.variable(0.)
+    precision = K.variable(0.)
+    for i in range(0,32):
+        i_true = K.cast(K.equal(y_true, i), "float32")
+        i_pre = K.cast(K.equal(y_pred, i), "float32")
+        recall = recall + recall_m(i_true, i_pre) / 32.
+        precision = precision + precision_m(i_true, i_pre) / 32.
+
+    return 2 * recall * precision / (recall + precision + K.epsilon())
