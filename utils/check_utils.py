@@ -72,14 +72,15 @@ def check_useless_seq(content):
 def check_path(path):
     '''
     :param path 被检查是否存在的路径
-    :return 已经存在的路径（不存在则创建）
-    检查路径是否存在，不存在则创建
+    :return 是否存在的路径
+    检查路径是否存在
     '''
-    if os.path.exists(path):
-        return path
-    else:
+    return os.path.exists(path)
+
+def check_and_build(path):
+    if not check_path(path):
         os.makedirs(path)
-        return path
+    return path
 
 if __name__ == "__main__":
     src = ["hahaah.doc"]

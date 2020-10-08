@@ -5,13 +5,24 @@ from tqdm import tqdm
 import re
 
 tag_dic = {
-   "location" : "LOCATION",
-    "area" : "AREA",
-    "rent" : "RENT",
-    "type" : "TYPE",
-    "startTerm" : "STARTTERM",
-    "endTerm" : "ENDTERM",
-    "deadline" : "DEADLINE"
+    "person": "PERSON",
+    "house": "HOUSE",
+    "location": "LOCATION",
+    "area": "AREA",
+    "time": "TIME",
+    "term": "TERM",
+    "rent": "RENT",
+    "money": "MONEY",
+    "rule": "RULE",
+    "invoice": "INVOICE",
+    "used": "USED",
+    "paperwork": "PAPERWORK",
+    "org": "ORG",
+    "contract": "CONTRACT",
+    "duty": "DUTY",
+    "structure": "STRUCTURE",
+    "name": "NAME",
+    "license_number": "LICENSE_NUMBER"
 }
 
 
@@ -48,7 +59,6 @@ def read_file(r_ann_path, r_txt_path, w_path, store_path):
         content_str = f.read()
         # content_str = content_str.replace("\n", "").replace("\r", "").replace("//////", "\n")
 
-
     print("开始写入文本%s" % w_path)
     with codecs.open(store_path, "a", encoding="utf-8") as store:
         with codecs.open(w_path, "w", encoding="utf-8") as wp:
@@ -60,13 +70,14 @@ def read_file(r_ann_path, r_txt_path, w_path, store_path):
                     phrase += str
                 else:
                     if len(phrase) > 0:
-                        phrase = re.sub("\s","_", phrase)
+                        phrase = re.sub("\s", "_", phrase)
                         store.write("%s\n" % phrase)
                         print("存入内容：-----------》", phrase)
                         phrase = ""
                     tag = "O"
                 wp.write('%s %s\n' % (str, tag))
             wp.write('%s\n' % "END O")
+
 
 def get_file_path(base_path, target_path):
     '''将ann和txt文件分开；来获取路径列表
@@ -82,6 +93,7 @@ def get_file_path(base_path, target_path):
     targets = [os.path.join(target_path, i) for i in txt_files]
     return anns, txts, targets
 
+
 def deal_files(base_path, target_path, dic_path):
     '''把文件转换成BIOES已打好标签内容的格式
     :param base_path ann,txt文件存放总路径
@@ -92,7 +104,6 @@ def deal_files(base_path, target_path, dic_path):
         print("ann与txt数目不一致")
         return
 
-
     for index in tqdm(range(len(anns))):
         read_file(anns[index], txts[index], targets[index], dic_path)
 
@@ -102,11 +113,7 @@ def store_split(split_list, store_path):
         wp.write("%s \n" % split_list)
 
 
-
-
-
-
 if __name__ == '__main__':
     '''test'''
     # read_ann("F:/data/test/contact/0.ann","F:/data/test/contact/0.txt","F:/data/test/pred_contant/0.txt")
-    deal_files("F:/data/test/contact","F:/data/test/pred_contant", "./dic_word.txt")
+    deal_files("F:/data/test/contact", "F:/data/test/pred_contant", "./dic_word.txt")

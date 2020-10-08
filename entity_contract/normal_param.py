@@ -1,14 +1,50 @@
 START_TAG = "[CLS]"
 STOP_TAG = "[SEP]"
 tag_dic = {
-   "location" : "LOCATION",
-    "area" : "AREA",
-    "rent" : "RENT",
-    "type" : "TYPE",
-    "startTerm" : "STARTTERM",
-    "endTerm" : "ENDTERM",
-    "deadline" : "DEADLINE"
+    "person": "PERSON",
+    "house": "HOUSE",
+    "location": "LOCATION",
+    "area": "AREA",
+    "time": "TIME",
+    "term": "TERM",
+    "rent": "RENT",
+    "money": "MONEY",
+    "rule": "RULE",
+    "invoice": "INVOICE",
+    "used": "USED",
+    "paperwork": "PAPERWORK",
+    "org": "ORG",
+    "contract": "CONTRACT",
+    "duty": "DUTY",
+    "structure": "STRUCTURE",
+    "name": "NAME",
+    "license_number": "LICENSE_NUMBER"
 }
+label_to_tag = {
+    "PERSON" : "person",
+    "HOUSE": "house",
+     "LOCATION": "location",
+     "AREA": "area",
+    "TIME": "time",
+    "TERM": "term",
+     "RENT": "rent",
+    "MONEY":"money",
+    "RULE": "rule",
+    "INVOICE": "invoice",
+    "USED": "used",
+    "PAPERWORK": "paperwork",
+    "ORG": "org",
+    "CONTRACT": "contract",
+     "DUTY":"duty",
+    "STRUCTURE": "structure",
+    "NAME": "name",
+    "LICENSE_NUMBER": "license_number",
+    "STARTTERM" : "startterm",
+    "ENDTERM" : "endterm",
+    "TYPE" : "type",
+     "DEADLINE" : "deadline"
+}
+
 dic_path = ""
 
 labels = ["LOCATION","AREA","RENT","STARTTERM","ENDTERM", "TYPE", "DEADLINE"]
