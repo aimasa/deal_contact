@@ -38,5 +38,5 @@ def read_single_data(path, vocab, length):
     txts = []
     tmp = NER_pre_data.read_content(path, mode="txt")
     txts.append(tmp)
-    content = data_change.prepare_test_sequence(txts,vocab, length)
+    content, _, _ = data_change.prepare_sequence(txts,vocab)
     return content

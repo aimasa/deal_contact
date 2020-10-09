@@ -76,7 +76,7 @@ def read_file(r_ann_path, r_txt_path, w_path, store_path):
                         phrase = ""
                     tag = "O"
                 wp.write('%s %s\n' % (str, tag))
-            wp.write('%s\n' % "END O")
+            wp.write('%s\n' % "E O")
 
 
 def get_file_path(base_path, target_path):

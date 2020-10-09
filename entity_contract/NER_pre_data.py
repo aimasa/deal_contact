@@ -64,6 +64,16 @@ def read_content(file, mode = "label"):
     return read_label(contents)
 
 def read_txt(contents):
+    result = []
+    for content in contents.split("\n"):
+        tmp = split_txt(content)
+        if(len(tmp)):
+            result.append(tmp)
+    return result
+
+
+
+def split_txt(contents):
     '''
     读取txt文件，并返回
     :param contents:
@@ -71,14 +81,18 @@ def read_txt(contents):
     '''
     result = []
     for content in contents:
-        if content is "\n" or content is " ":
+        if content is "\n" or content is " " or content is "":
             continue
         # create_vocab(content)
         result.append(content)
     return result
 
-def read_label(contents):
-    contents = contents.replace("\n", " ")
+def split_label(contents):
+    '''
+    将自然段中的label通过空格截断，整理成label的list格式
+    :param contents: 自然段的全部内容
+    :return: 被整理成label的list<>
+    '''
     result = []
     for content in contents.split(" "):
         if content is "" or content is " ":
@@ -86,7 +100,21 @@ def read_label(contents):
         result.append(content)
     return result
 
-
+def read_label(contents):
+    '''
+    根据"\n"切割contents，根据自然段分割句子
+    :param contents: 一篇文章的全部内容
+    :return: 分段后的文章句子
+    '''
+    contents = contents.split("\n")
+    result = []
+    for content in contents:
+        if content is "" or content is " ":
+            continue
+        tmp = split_label(content)
+        if len(tmp):
+            result.append(tmp)
+    return result
 
 def get_path(head_path):
     names = os.listdir(head_path)
@@ -122,9 +150,9 @@ def load_data(label_paths, txt_paths):
     for index in range(len(label_paths)):
         label_array = read_content(label_paths[index], "label")
         txt_array = read_content(txt_paths[index], "txt")
-        labels.append(label_array)
+        labels += label_array
         max(max_length, len(txt_array))
-        txts.append(txt_array)
+        txts += txt_array
     return txts, labels
 
 

@@ -8,7 +8,7 @@ def get_path(path):
     :param path 文件总路径'''
     txt_path = os.path.join(path, "txt")
     label_path = os.path.join(path, "label")
-    return check_utils.check_path(txt_path), check_utils.check_path(label_path)
+    return check_utils.check_and_build(txt_path), check_utils.check_and_build(label_path)
 
 def read_content(file, txt_path, label_path):
     '''将file文件中的内容切割成txt和label部分，分别存进相应文件
@@ -18,7 +18,7 @@ def read_content(file, txt_path, label_path):
     with open(file, "r", encoding="utf-8") as f:
         contents = f.readlines()
         for row in contents:
-            if row is "\n" or row is "END O":
+            if row is "\n" or row is "E O":
                 write_txt(row, txt_path)
                 write_txt(row, label_path)
             else:

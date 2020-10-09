@@ -47,7 +47,7 @@ label_to_tag = {
 
 dic_path = ""
 
-labels = ["LOCATION","AREA","RENT","STARTTERM","ENDTERM", "TYPE", "DEADLINE"]
+labels = ["PERSON","HOUSE","LOCATION", "AREA", "TIME", "TERM", "RENT", "MONEY", "RULE", "INVOICE","USED","PAPERWORK","ORG","CONTRACT","DUTY","STRUCTURE","NAME","LICENSE_NUMBER" ,"STARTTERM", "ENDTERM","TYPE" ,"DEADLINE"]
 
 EMBEDDING_DIM = 5
 HIDDEN_DIM = 4
@@ -62,7 +62,7 @@ save_path_keras = 'checkpoints/lstm_crf_keras.pth'
 # train_file = './data/train.txt'
 # dev_file = './data/dev.txt'
 # test_file = './data/test.txt'
-max_length = 7948
+max_length = 1750
 vocab = 'bert/vocab.txt'
 lstm_vocab = 'vocab.pkl'
 
