@@ -62,7 +62,7 @@ save_path_keras = 'checkpoints/lstm_crf_keras.pth'
 # train_file = './data/train.txt'
 # dev_file = './data/dev.txt'
 # test_file = './data/test.txt'
-max_length = 1750
+max_length = 415
 vocab = 'bert/vocab.txt'
 lstm_vocab = 'vocab.pkl'
 

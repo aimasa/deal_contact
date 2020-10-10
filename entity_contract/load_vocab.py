@@ -1,4 +1,4 @@
-from entity_contract import NER_pre_data
+
 import pickle
 import os
 vocab = {}

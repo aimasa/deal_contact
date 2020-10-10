@@ -7,9 +7,9 @@ import keras
 from entity_contract import NERInference
 
 import sys
-f = open('lstm_crf.log', 'a')
-sys.stdout = f
-sys.stderr = f		# redirect std err, if necessary
+# f = open('lstm_crf.log', 'a')
+# sys.stdout = f
+# sys.stderr = f		# redirect std err, if necessary
 
 def read_vocab(vocab_path):
     '''
@@ -80,12 +80,12 @@ def prediction(path):
     labels_to_ix = NER_pre_data.build_label(normal_param.labels)
     vocab = read_vocab(normal_param.lstm_vocab)
     model = keras_BILSTM_CEF.load_embedding_bilstm2_crf_model(normal_param.save_path, len(vocab), len(labels_to_ix), normal_param.max_length)
-    myNerInfer = NERInference.NERInference(model, vocab, labels_to_ix, len(vocab), normal_param.max_length, path)
-    new_string4_pred = myNerInfer.predict()
+    myNerInfer = NERInference.NERInference(model, vocab, labels_to_ix, len(vocab), path)
+    new_string4_pred = myNerInfer.predict_all()
     print(new_string4_pred)
     # result = model.predict(content)
     # print(result)
 
 if __name__ == '__main__':
-    run()
-    # prediction("F:/data/test/pred_contant/txt/0.txt")
+    # run()
+    prediction("F:/data/test/pred_contant/txt/0.txt")
