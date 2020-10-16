@@ -15,32 +15,44 @@ class NERInference:
         self.path = path
 
     def predict_all(self):
-        paddeds = self.read_data()
+        contents, lengths = self.read_data()
         result = []
-        for padded in paddeds:
-            result.append(self.predict(padded))
-        return result
+        result_ix = []
+        length = len(contents)
+        for index in range(length):
+            tag_result, ix_result = self.predict(contents[index], lengths[index])
+            result.append(tag_result)
+            result_ix.append(ix_result)
+        return result, result_ix
 
 
-    def predict(self, padded):
-        preds = []
-        pred_ner = np.argmax(self.model.predict(padded), axis=-1)
-        for w, pred in zip(padded[0], pred_ner[0]):
-            if w == self.n_words - 1:
-                break
-            # print("{:15}: {}".format(self.words[w], self.tags[pred]))
-            preds.append(list(self.tags.keys())[list(self.tags.values()).index(pred)])
-        return preds
+    def predict(self, content, length):
+        # preds = []
+        # pred_ner = np.argmax(self.model.predict(padded), axis=-1)
+        # for w, pred in zip(padded[0], pred_ner[0]):
+        #     if w == self.n_words - 1:
+        #         break
+        #     # print("{:15}: {}".format(self.words[w], self.tags[pred]))
+        #     preds.append(list(self.tags.keys())[list(self.tags.values()).index(pred)])
+        raw = self.model.predict(content)[0][-length:]
+        result = [np.argmax(row) for row in raw]
+        result_tags = [self.tags[i] for i in result]
+        return result_tags, result
 
     def read_data(self):
         # labels_to_ix = NER_pre_data.build_label(normal_param.labels)
         vocab = normal_util.read_vocab(normal_param.lstm_vocab)
-        content = read_single_data(self.path, vocab, length=normal_param.max_length)
+        contents, lengths = read_single_data(self.path, vocab, length=normal_param.max_length)
 
-        return content
+        return contents, lengths
 
 def read_single_data(path, vocab, length):
-    txts = []
-    tmp = NER_pre_data.read_content(path, mode="txt")
-    content = data_change.prepare_pre_sequence(tmp, vocab, length)
-    return content
+    txt_array = []
+    lengths = []
+    contents = NER_pre_data.read_content(path, mode="txt")
+    for tmp in contents:
+        content, max_length = data_change.auto_single_test_pad(tmp, vocab, length)
+        txt_array.append(content)
+        lengths.append(max_length)
+    return txt_array, lengths
+

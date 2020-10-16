@@ -1,6 +1,7 @@
 import shutil
 import os
 import datetime
+import random
 from utils import check_utils
 import re
 import pickle
@@ -97,3 +98,26 @@ def read_txt(txt_path):
     with open(txt_path, 'r', encoding="utf-8") as f:
         content = f.read()
     return content
+
+def shuffle(txt, label):
+    length = len(txt)
+    index = [i for i in range(length)]
+    random.shuffle(index)
+    txt = [txt[i] for i in index]
+    label = [label[i] for i in index]
+    return txt, label
+
+
+def write_content(content, write_path):
+    with open(write_path, 'a') as f:
+        f.write(content)
+
+
+def concat_path(head_path):
+    paths = [os.path.join(head_path, path_name) for path_name in os.listdir(head_path)]
+    return paths
+
+def gain_filename_from_path(path, mode):
+    if mode == 'txt':
+        name = re.search("(\\d+)\\.txt", path).group(1)
+        return ("%s.txt"% name)

@@ -1,60 +1,28 @@
+from model import keras_BILSTM_CEF
+from entity_contract import NER_pre_data, normal_param
+from utils import normal_util, data_change
+import numpy as np
 
-import pickle
-from model import LSTM_CRF
-import torch
-import torch.optim as optim
-from utils import data_change
-EMBEDDING_DIM = 5
-HIDDEN_DIM = 4
-START_TAG = "[CLS]"
-STOP_TAG = "[SEP]"
-EPOCH = 4
-training_data = [(
-    "the wall street journal reported today that apple corporation made money".split(),
-    "B I I I O O O B I O O".split()
-), (
-    "georgia tech is a university in georgia".split(),
-    "B I O O O O B".split()
-)]
+list_label = ["LOC", "ORG", "PER"]
+label_to_ix, ix_to_label = NER_pre_data.build_label(list_label)
+vocab = normal_util.read_vocab("vocab.pkl")
+model = keras_BILSTM_CEF.load_embedding_bilstm2_crf_model(normal_param.save_path, len(vocab), len(label_to_ix), 0)
+predict_text = '张东升是中国人'
+maxlength = 128
+x, length = data_change.auto_single_test_pad(predict_text, vocab, maxlength)
+# model.load_weights('model/crf.h5')
+raw = model.predict(x)[0][-length:]
+result = [np.argmax(row) for row in raw]
+result_tags = [ix_to_label[i] for i in result]
 
-word_to_ix = {}
-for sentence, tags in training_data:
-    for word in sentence:
-        if word not in word_to_ix:
-            word_to_ix[word] = len(word_to_ix)
+per, loc, org = '', '', ''
 
-tag_to_ix = {"B": 0, "I": 1, "O": 2, START_TAG: 3, STOP_TAG: 4}
+for s, t in zip(predict_text, result_tags):
+    if t in ('B-PER', 'I-PER'):
+        per += ' ' + s if (t == 'B-PER') else s
+    if t in ('B-ORG', 'I-ORG'):
+        org += ' ' + s if (t == 'B-ORG') else s
+    if t in ('B-LOC', 'I-LOC'):
+        loc += ' ' + s if (t == 'B-LOC') else s
 
-model = LSTM_CRF.BiLSTM_CRF(len(word_to_ix), tag_to_ix, EMBEDDING_DIM, HIDDEN_DIM)
-optimizer = optim.SGD(model.parameters(), lr=0.01, weight_decay=1e-4)
-
-# Check predictions before training
-with torch.no_grad():
-    precheck_sent = torch.tensor(data_change.prepare_sequence(training_data[0][0], word_to_ix), dtype=torch.long)
-    precheck_tags = torch.tensor([tag_to_ix[t] for t in training_data[0][1]], dtype=torch.long)
-    print(model(precheck_sent))
-
-# Make sure prepare_sequence from earlier in the LSTM section is loaded
-for epoch in range(300):  # again, normally you would NOT do 300 epochs, it is toy data
-    for sentence, tags in training_data:
-        # Step 1. Remember that Pytorch accumulates gradients.
-        # We need to clear them out before each instance
-        model.zero_grad()
-
-        # Step 2. Get our inputs ready for the network, that is,
-        # turn them into Tensors of word indices.
-        sentence_in = torch.tensor(LSTM_CRF.prepare_sequence(sentence, word_to_ix), dtype=torch.long)
-        targets = torch.tensor([tag_to_ix[t] for t in tags], dtype=torch.long)
-
-        # Step 3. Run our forward pass.
-        loss = model.neg_log_likelihood(sentence_in, targets)
-
-        # Step 4. Compute the loss, gradients, and update the parameters by
-        # calling optimizer.step()
-        loss.backward()
-        optimizer.step()
-
-# Check predictions after training
-with torch.no_grad():
-    precheck_sent = torch.tensor(LSTM_CRF.prepare_sequence(training_data[0][0], word_to_ix), dtype=torch.long)
-    print(model(precheck_sent))
+print(['person:' + per, 'location:' + loc, 'organzation:' + org])

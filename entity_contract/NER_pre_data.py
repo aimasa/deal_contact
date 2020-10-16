@@ -17,18 +17,18 @@ HIDDEN_DIM = 4
 START_TAG = "[CLS]"
 STOP_TAG = "[SEP]"
 PAD_TAG = "[PAD]"
-
+ix_to_label = {}
 tag_to_ix = {}
 vocab = {}
 ech_size = 100
 # batch_size = 2
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-with open("vocab.pkl", 'rb') as f:
-    vocab = pickle.load(f)
+# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+# with open("vocab.pkl", 'rb') as f:
+#     vocab = pickle.load(f)
 
 
 def build_label(labels):
-    if len(tag_to_ix) > 0 : return tag_to_ix
+    if len(tag_to_ix) > 0 : return tag_to_ix, ix_to_label
     '''根据已有的label构建标签
     :param labels 已有标签种类
     :return tag_to_index dic 加上边界标记符组成的字典[key : 加上边界标记符的标签, value : 标签对应的下标]'''
@@ -38,10 +38,12 @@ def build_label(labels):
         for tag_head in tag_heads:
             tag = '%s-%s' % (tag_head, label)
             tag_to_ix[tag] = len(tag_to_ix)
+            ix_to_label[tag_to_ix[tag]] = tag
     for lab in labs:
         tag_to_ix[lab] = len(tag_to_ix)
+        ix_to_label[tag_to_ix[lab]] = lab
 
-    return tag_to_ix
+    return tag_to_ix, ix_to_label
 
 def special_tag(tag_to_ix):
     '''添加特殊tag---index的key-value组合
@@ -64,6 +66,11 @@ def read_content(file, mode = "label"):
     return read_label(contents)
 
 def read_txt(contents):
+    '''
+
+    :param contents:
+    :return:
+    '''
     result = []
     for content in contents.split("\n"):
         tmp = split_txt(content)
@@ -206,11 +213,11 @@ def concat_path(head_path):
     txt_head_path = os.path.join(head_path, "txt")
     label_paths = [os.path.join(label_head_path, path_name) for path_name in os.listdir(label_head_path)]
     txt_paths = [os.path.join(txt_head_path, path_name) for path_name in os.listdir(txt_head_path)]
-    index =  [i for i in range(len(txt_paths))]
-    random.shuffle(index)
-    new_label_path = [label_paths[i] for i in index]
-    new_txt_paths = [txt_paths[i] for i in index]
-    return new_label_path, new_txt_paths, index
+    # index =  [i for i in range(len(txt_paths))]
+    # random.shuffle(index)
+    # new_label_path = [label_paths[i] for i in index]
+    # new_txt_paths = [txt_paths[i] for i in index]
+    return label_paths, txt_paths
 
 #
 #

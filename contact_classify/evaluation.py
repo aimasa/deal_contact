@@ -4,6 +4,9 @@ from pro_data import process_data as process
 from contact_classify import normal_param
 model_graph_dir = './runs/' + normal_param.model_name + '/checkpoint/model-900.meta'  # 模型中.meta文件
 
+from sklearn import metrics
+
+
 # dict = {"财经":2, "彩票":0, "房产":1}
 def pro_data():
     '''读取验证集中数据
@@ -12,8 +15,8 @@ def pro_data():
     '''
     pro = process.process_data()
     pro.split_data_file(normal_param.dev_path)
-    dev_data, dev_label, _ = pro.deal_data(part=len(pro.all_text_path), n_part=0)
-    return dev_data, dev_label
+    dev_data, dev_label, dev_label_not_deal = pro.deal_data(part=len(pro.all_text_path), n_part=0, need_label= True)
+    return dev_data, dev_label, dev_label_not_deal
 
 
 def test(data_array, one_hot_labels):
@@ -44,6 +47,7 @@ def test(data_array, one_hot_labels):
         pred, accuracy = sess.run([pred, accuracy],
                                   feed_dict={input_x: data_array, input_y: one_hot_labels, dropout_keep_prob: 1.0})
 
+
     print('Successfully load the pre-trained model!')
     return pred, accuracy
 
@@ -67,12 +71,19 @@ def run():
     :return dev_label 验证集列表中数据对应label
     '''
     # texts_path, texts_label = read_files(path)
-    dev_data, dev_label = pro_data()
+    dev_data, dev_label, entire_label = pro_data()
 
     # return dev_data, dev_label
     # 如果单独拿验证集得到预测结果的话，可以把return这句注释掉，然后把下面100-102三行解除注释，运行run
     pro, accuracy = test(dev_data, dev_label)
     print(pro)
+    from sklearn.metrics import classification_report
+
+    # Y_test = np.array(Y_test).reshape(len(Y_test), -1)
+    # enc = OneHotEncoder()
+    # enc.fit(Y_test)
+    # targets = enc.transform(Y_test).toarray()
+    print(classification_report(pro, entire_label))
     print("this is acc", accuracy)
 
 

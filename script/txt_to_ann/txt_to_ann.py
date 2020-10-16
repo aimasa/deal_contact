@@ -2,7 +2,7 @@ from utils import normal_util, check_utils
 import os
 from entity_contract import normal_param
 import re
-
+from tqdm import tqdm
 def read_txt(path):
     '''
     读取path中的txt文档，并返回文档的list表list<>
@@ -29,13 +29,15 @@ def read_label(path):
     labels = labels.split(" ")
     label_by_char = []
     for i in labels:
-        tmp = i.split("\n")
+        tmp = i.split("\r\n")
         if len(tmp) > 1:
             for i in range(len(tmp)):
                 if tmp[i] == "" :
+                    label_by_char.append("\r")
                     label_by_char.append("\n")
                     continue
                 elif i - 1 >= 0 and tmp[i - 1] != "":
+                    label_by_char.append("\r")
                     label_by_char.append("\n")
                 label_by_char.append(tmp[i])
         else:
@@ -115,13 +117,14 @@ def label_parse(label, start):
         tag = normal_param.label_to_tag[label_]
         end = start + 1
         head = ["B-", "E-", "S-"]
-        while end < len(label) and (check_title_head(label[end], head) and label[end] != "O"):
+        while end < len(label) and (check_title_head(label[end], head) and label[end] != "O" and label[end] != "\r"):
             end = end + 1
         if  end < len(label) and label[end].startswith("E-"):
             end = end + 1
     elif label[start].startswith("S-"):
         end = start + 1
         tag = label[start].replace("S-", "")
+        tag = normal_param.label_to_tag[tag]
     else:
         end = start + 1
         tag = None
@@ -145,7 +148,7 @@ def check_title_head(title, head):
 def run(head_path, ann_path):
     label_path, content_path = read_path(head_path)
     length = len(label_path)
-    for i in range(length):
+    for i in tqdm(range(length)):
         id = re.search("(\\d+)\\.txt", content_path[i]).group(1)
         label = read_label(label_path[i])
         content = read_txt(content_path[i])
@@ -171,7 +174,7 @@ def write_ann_file(ann_info, ann_path):
 
 
 if __name__ == '__main__':
-    run("F:/data/test/pred_contant", "F:/data/test/pred_contant/ann")
+    run("F:/contract", "F:/contract/ann")
     # str = "A\nB\n"
     # tmp = str.split("\n")
     # print(tmp)

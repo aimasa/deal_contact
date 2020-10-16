@@ -22,9 +22,9 @@ def build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
     带embedding的双向LSTM + crf
     """
     model = Sequential()
-    model.add(Embedding(VOCAB_SIZE, output_dim=EMBEDDING_OUT_DIM, input_length=TIME_STAMPS))
+    model.add(Embedding(VOCAB_SIZE, output_dim=EMBEDDING_OUT_DIM))
     model.add(Dropout(DROPOUT_RATE))
-    model.add(LSTM(HIDDEN_UNITS, return_sequences=True))
+    model.add(LSTM(HIDDEN_UNITS // 2, return_sequences=True))
 
     # model.add(Bidirectional(LSTM(HIDDEN_UNITS, return_sequences=True)))
     # model.add(Dropout(DROPOUT_RATE))

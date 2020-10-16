@@ -154,7 +154,7 @@ class process_data(object):
 
         return self.all_text_path[first_path_num:last_path_num]
 
-    def deal_data(self, n_part, part=0, is_word_split=False):
+    def deal_data(self, n_part, part=0, need_label=False):
         '''加载数据，并且转成对应数据下标id数组输出'''
 
         # part = self.num_part()
@@ -186,6 +186,8 @@ class process_data(object):
         # return train_text, self.dense_to_one_hot(train_label, normal_param.num_class), dev_text, self.dense_to_one_hot(
         #     dev_label, normal_param.num_class), len(
         #     vocab_processor.vocabulary_)
+        if need_label:
+            return text_shuffled, self.dense_to_one_hot(label_shuffled, normal_param.num_class), label_shuffled
         return text_shuffled, self.dense_to_one_hot(label_shuffled, normal_param.num_class), len(
             vocab_processor.vocabulary_)
 
