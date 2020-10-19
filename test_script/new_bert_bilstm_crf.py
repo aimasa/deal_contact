@@ -37,8 +37,10 @@ def get_sentence(list):
     sentencelist = []
     sentences = ''
     for word in list:
-        if word != '\n':
+        if word != '\n' and word != '':
             sentences = sentences + word
+        elif len(sentences) == 0:
+            continue
         else:
             sentencelist.append(sentences)
             sentences = ''
@@ -49,8 +51,10 @@ def tag(list):
     totallist = []
     childrenlist = []
     for tag in list:
-        if tag != '\n':
+        if tag != '\n' and tag != "":
             childrenlist.append(tag2label[tag])
+        elif len(childrenlist) == 0:
+            continue
         else:
             totallist.append(childrenlist)
             childrenlist = []
@@ -58,7 +62,7 @@ def tag(list):
 
 
 def tag_padding(list):
-    leng = [len(x) for x in list]
+    # leng = [len(x) for x in list]
     maxlen = 120
     for i, tag in enumerate(list):
         if len(tag) < maxlen:
@@ -66,6 +70,9 @@ def tag_padding(list):
         else:
             list[i] = tag[:120]
     return list
+
+
+
 
 
 def inputtag(list):
@@ -131,6 +138,7 @@ def build_model():
     model.add(crf_layer)
     model.compile(loss=crf_layer.loss_function, optimizer='rmsprop', metrics=[crf_layer.accuracy])
     return model
+
 
 
 def train(wordvec, y, wordvec1, y1):

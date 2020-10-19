@@ -22,15 +22,20 @@ def prepare_sequence(seqs, to_ix):
     return np.array(idxs), np.array(length), max_length
 
 
-def auto_pad(seqs, to_ix, length, is_label = False):
-    x = [[to_ix.get(w, 1) for w in s] for s in seqs]
-    if is_label is False:
-        max_length = len(x)
-        x = pad_sequences(x, length)  # left padding
-        return x, max_length
-    else:
-        y_chunk = pad_sequences(x, length, value=-1)
-        return y_chunk
+def auto_pad(seqs, to_ix, length, is_label = False, model = None):
+
+        x = [[to_ix.get(w, 1) for w in s] for s in seqs]
+        if model is None:
+            if is_label is False:
+                max_length = len(x)
+                x = pad_sequences(x, length)  # left padding
+                return x, max_length
+            else:
+                y_chunk = pad_sequences(x, length, value=-1)
+                return y_chunk
+        elif model == "bert":
+            labels = pad_sequences(x, length, padding= 'post', value=0)
+            return labels
 
 def auto_single_test_pad(seq, to_ix, length, is_label = False):
     # seq = seq.split("")

@@ -30,7 +30,7 @@ def build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
     model.add(TimeDistributed(Dense(NUM_CLASS)))
     crf_layer = CRF(NUM_CLASS, sparse_target=True)
     model.add(crf_layer)
-    model.summary()
+    # model.summary()
     adam = Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
     model.compile(adam, loss=crf_layer.loss_function,
                     metrics=[
