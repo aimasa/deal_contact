@@ -67,3 +67,4 @@ if __name__ == "__main__":
     # result  = re.search("\n", "O\n")
     # print(result)
     run("F:/data/test/pred_contant", "F:/data/test/pred_contant/txt_and_label")
+    # run("F:/data/test/other_content", "F:/data/test/other_content/txt_and_label")

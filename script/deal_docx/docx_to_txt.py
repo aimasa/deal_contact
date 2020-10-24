@@ -12,8 +12,11 @@ def docx_content(docx_path:str) -> list:
     :return contents 从docx中读取出来的文本内容'''
     file_content = docx.Document(docx_path)
     contents = []
+    all_tables = file_content.tables
+    i = 0
     for para in file_content.paragraphs:
         text = para.text
+
         if check_utils.check_useless_seq(text):
             break
         contents.append(para.text)
@@ -53,7 +56,7 @@ def run(root_path, head_path, error_path):
             txt_path = os.path.join(head_path, str(index) + '.txt')
             write_in_txt(contents, txt_path)
         except:
-            normal_util.copy_move(path, check_utils.check_path(error_path))
+            normal_util.copy_move(path, check_utils.check_and_build(error_path))
         bar.update(index + 1)
     bar.finish()
 
@@ -62,4 +65,8 @@ if __name__ == '__main__':
     root_path = "F:/rent_house_contract_pos/tst/rent_house_contract_pos"
     head_path = "F:/contract/dev"
     error_path = "F:/error_contract"
+    # root_path = "G:\\tim照片消息缓存聚集地\消息缓存\\794182811\\FileRecv\\合同数据\\合同数据"
+    # head_path = "G:\\tim照片消息缓存聚集地\\消息缓存\\79418281" \
+    #             "1\\FileRecv\\合同数据\\dev"
+    # error_path = "F:/error_contract"
     run(root_path, head_path, error_path)

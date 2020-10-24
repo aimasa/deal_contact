@@ -15,14 +15,17 @@ from entity_contract import normal_param
 EMBEDDING_OUT_DIM = 128
 HIDDEN_UNITS = 200
 DROPOUT_RATE = 0.2
+EMBEDDING_DIM = 100 #词向量维度
 
-
-def build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
+def build_embedding_bilstm2_crf_model(NUM_CLASS, embeddings_matrix, input_length):
     """
     带embedding的双向LSTM + crf
     """
     model = Sequential()
-    model.add(Embedding(VOCAB_SIZE, output_dim=EMBEDDING_OUT_DIM, mask_zero=True))
+    model.add(Embedding(len(embeddings_matrix), EMBEDDING_DIM,
+                            weights=[embeddings_matrix],
+                            input_length=input_length ,
+                            trainable=False ))
     # model.add(Dropout(DROPOUT_RATE))
     model.add(Bidirectional(LSTM(HIDDEN_UNITS // 2, return_sequences=True)))
 
@@ -42,8 +45,8 @@ def build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
 def save_embedding_bilstm2_crf_model(model, filename):
     save_load_utils.save_all_weights(model,filename)
 
-def load_embedding_bilstm2_crf_model(filename, VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
-    model = build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS)
+def load_embedding_bilstm2_crf_model(filename, NUM_CLASS, embeddings_matrix, input_length):
+    model = build_embedding_bilstm2_crf_model(NUM_CLASS, embeddings_matrix, input_length)
     save_load_utils.load_all_weights(model, filename, include_optimizer=False)
     return model
 

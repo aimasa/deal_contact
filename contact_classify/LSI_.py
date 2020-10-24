@@ -52,10 +52,11 @@ for i in d_l:
 from sklearn.svm  import  SVC
 from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
-X_train,X_test, Y_train, Y_test =train_test_split(new_d_l,labelss,test_size=0.3)
+X_train,X_test, Y_train, Y_test = train_test_split(new_d_l,labelss,test_size=0.3)
 # sv=SVC(decision_function_shape = 'ovo')
-sv = LDA()
+sv = GaussianNB()
 # sv = PCA()
 print('训练')
 sv.fit(X_train,Y_train)

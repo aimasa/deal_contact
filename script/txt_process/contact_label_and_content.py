@@ -4,27 +4,35 @@ from utils import normal_util
 from tqdm import tqdm
 import re
 
+# tag_dic = {
+#     "person": "PERSON",
+#     "house": "HOUSE",
+#     "location": "LOCATION",
+#     "area": "AREA",
+#     "time": "TIME",
+#     "term": "TERM",
+#     "rent": "RENT",
+#     "money": "MONEY",
+#     "rule": "RULE",
+#     "invoice": "INVOICE",
+#     "used": "USED",
+#     "paperwork": "PAPERWORK",
+#     "org": "ORG",
+#     "contract": "CONTRACT",
+#     "duty": "DUTY",
+#     "structure": "STRUCTURE",
+#     "name": "NAME",
+#     "license_number": "LICENSE_NUMBER"
+# }
 tag_dic = {
-    "person": "PERSON",
-    "house": "HOUSE",
-    "location": "LOCATION",
-    "area": "AREA",
-    "time": "TIME",
-    "term": "TERM",
-    "rent": "RENT",
-    "money": "MONEY",
-    "rule": "RULE",
-    "invoice": "INVOICE",
-    "used": "USED",
-    "paperwork": "PAPERWORK",
-    "org": "ORG",
-    "contract": "CONTRACT",
-    "duty": "DUTY",
-    "structure": "STRUCTURE",
-    "name": "NAME",
-    "license_number": "LICENSE_NUMBER"
+    "org" : "ORG",
+    "location" : "LOCATION",
+    "time" : "TIME",
+    "money" : "MONEY",
+    "person" : "PERSON",
+    "number" : "NUMBER",
+    "object" : "OBJECT"
 }
-
 
 def read_file(r_ann_path, r_txt_path, w_path, store_path):
     '''读取ann内容转成数组'''
@@ -37,6 +45,8 @@ def read_file(r_ann_path, r_txt_path, w_path, store_path):
         while line != "":
             line_arr = line.split()
             print(line_arr)
+            if len(line_arr) <= 1:
+                break
             cls = tag_dic[line_arr[1]]
             start_index = int(line_arr[2])
             end_index = int(line_arr[3])
@@ -117,3 +127,4 @@ if __name__ == '__main__':
     '''test'''
     # read_ann("F:/data/test/contact/0.ann","F:/data/test/contact/0.txt","F:/data/test/pred_contant/0.txt")
     deal_files("F:/data/test/contact", "F:/data/test/pred_contant", "./dic_word.txt")
+    # deal_files("F:/data/test/contact", "F:/data/test/other_content", "./dic_word.txt")

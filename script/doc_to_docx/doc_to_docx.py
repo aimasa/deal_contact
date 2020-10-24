@@ -38,7 +38,8 @@ def run(path):
 
 
 if __name__ == "__main__":
-    path = "F:/rent_house_contract_pos/trn/00/"  # 打开word文件
+    # path = "F:/rent_house_contract_pos/trn/00/"  # 打开word文件
+    path = "G:\\tim照片消息缓存聚集地\\消息缓存\\794182811\\FileRecv\\合同数据\\合同数据\\"
     run(path)
     # path = "G:/律师-买卖/"  # 打开word文件
     # run(path)

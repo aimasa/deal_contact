@@ -7,7 +7,7 @@ from keras.preprocessing import sequence
 import codecs
 import gc
 import keras
-
+from gensim.models import Word2Vec
 import sys
 # f = open('lstm_crf.log', 'a')
 # sys.stdout = f
@@ -142,7 +142,7 @@ def list_to_array(x_train, y_train, x_test, y_test, vocab, labels_to_ix, length,
     y_test, x_test = deal_txt_label_to_array(x_test, y_test, vocab, labels_to_ix, length, mode = wordembeding)
     return x_train, y_train, x_test, y_test
 
-def deal_txt_label_to_array(txt, label, vocab, labels_to_ix, length, mode = None):
+def deal_txt_label_to_array(txt, label, vocab, labels_to_ix, length, mode = "bilstm"):
     '''
     将文本和对应的label转换成array
     :param txt: 需要被文本embeding的文本
@@ -153,17 +153,33 @@ def deal_txt_label_to_array(txt, label, vocab, labels_to_ix, length, mode = None
     :param mode: embeding模式
     :return: label_array  label的数组, array_txt 文本的数组
     '''
-    if mode is None:
+    if mode is "bilstm":
         array_txt, _ = data_change.auto_pad(txt, vocab, length)
     elif mode == 'bert':
         array_txt = get_sentence(txt)
         array_txt = txtpad_use_bert(array_txt, length)
     else:
-        array_txt = get_sentence(txt)
-        array_txt = txtpad_use_bert(array_txt, length)
+        length = normal_param.max_length
+        array_txt, _ = data_change.auto_pad(txt, vocab, length)
     label_array = data_change.auto_pad(label, labels_to_ix, length, is_label=True, model= mode)
     return label_array, array_txt
 
+def txtpad_use_word2vec():
+    '''通过word2vec获得对应的词嵌入矩阵'''
+
+    model = Word2Vec.load("word2vec.h5")
+
+    word2idx = {"_PAD": 0} # 初始化 `[word : token]` 字典，后期 tokenize 语料库就是用该词典。
+
+    vocab_list = [(k, model.wv[k]) for k, v in model.wv.vocab.items()]
+
+    # 存储所有 word2vec 中所有向量的数组，留意其中多一位，词向量全为 0， 用于 padding
+    embeddings_matrix = np.zeros((len(model.wv.vocab.items()) + 1, model.vector_size))
+    for i in range(len(vocab_list)):
+        word = vocab_list[i][0]
+        word2idx[word] = i + 1
+        embeddings_matrix[i + 1] = vocab_list[i][1]
+    return embeddings_matrix, word2idx
 
 def get_sentence(list):
     sentencelist = ["".join(str(i) for i in a) for a in list]
@@ -263,7 +279,9 @@ def process_data_gen(data, label, embeding = None):
 
 
 
-def process_data(embeding = None):
+
+
+def process_data(embeding = None, is_train = True, vocab2 = None):
     '''
     根据不同的embeding方法处理数据。
     :param embeding: embeding方法：bert、wordvec、不用embeding方法
@@ -271,20 +289,29 @@ def process_data(embeding = None):
     '''
     labels_to_ix, _ = NER_pre_data.build_label(normal_param.labels)
     vocab = read_vocab(normal_param.lstm_vocab)
-    x, y = read_data(normal_param.head_path, vocab, labels_to_ix)
     # x_test, y_test = read_data(normal_param.head_test_path, vocab, labels_to_ix)
-    x_train, y_train, x_test, y_test = split_tst_trn(x, y, 50)
-    length = gain_max_length(x_train, x_test)
-    if embeding == 'bert':
-        x_train, y_train, x_test, y_test = list_to_array(x_train, y_train, x_test, y_test, vocab, labels_to_ix, length, wordembeding = 'bert')
-    elif embeding == 'wordvec':
-        x_train, y_train, x_test, y_test = list_to_array(x_train, y_train, x_test, y_test, vocab, labels_to_ix, length, wordembeding= 'wordvec')
+    if is_train:
+        x, y = read_data(normal_param.head_path, vocab, labels_to_ix)
+
+        x_train, y_train, x_test, y_test = split_tst_trn(x, y, 50)
+        length = gain_max_length(x_train, x_test)
+        if embeding == "wordvec":
+            x_train, y_train, x_test, y_test = list_to_array(x_train, y_train, x_test, y_test, vocab2, labels_to_ix,
+                                                             length, wordembeding=embeding)
+        else:
+            x_train, y_train, x_test, y_test = list_to_array(x_train, y_train, x_test, y_test, vocab, labels_to_ix, length, wordembeding = embeding)
+        y_test = np.expand_dims(y_test, 2)
+        y_train = y_train.reshape((y_train.shape[0], y_train.shape[1], 1))
+
+        return x_train, y_train, x_test, y_test, len(vocab), len(labels_to_ix)
     else:
-        x_train, y_train, x_test, y_test = list_to_array(x_train, y_train, x_test, y_test, vocab, labels_to_ix, length)
-    y_train = y_train.reshape((y_train.shape[0], y_train.shape[1], 1))
-    # y_train = np.expand_dims(y_train, 2)
-    y_test = np.expand_dims(y_test, 2)
-    return x_train, y_train, x_test, y_test, len(vocab), len(labels_to_ix)
+        x, y = read_data(normal_param.head_test_path, vocab, labels_to_ix)
+
+        length = gain_max_length(x, [])
+        y_test, x_test = deal_txt_label_to_array(x, y, vocab, labels_to_ix, length, mode = embeding)
+        return x_test, y_test
+
+
 
 
 

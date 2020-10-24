@@ -17,7 +17,7 @@ DROPOUT_RATE = 0.3
 NUM_CLASS = 5
 
 
-def build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
+def build_embedding_lstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
     """
     带embedding的双向LSTM + crf
     """
@@ -42,7 +42,7 @@ def save_embedding_bilstm2_crf_model(model, filename):
     save_load_utils.save_all_weights(model,filename)
 
 def load_embedding_bilstm2_crf_model(filename, VOCAB_SIZE, NUM_CLASS, TIME_STAMPS):
-    model = build_embedding_bilstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS)
+    model = build_embedding_lstm2_crf_model(VOCAB_SIZE, NUM_CLASS, TIME_STAMPS)
     save_load_utils.load_all_weights(model, filename, include_optimizer=False)
     return model
 
