@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
-      <change afterPath="$PROJECT_DIR$/entity_contract/word2Vec_embeding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/keras_word2vec_bilstm_crf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_classify/LSI_.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact_classify/LSI_.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/NERInference.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/NERInference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/gen_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/gen_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/normal_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/normal_param.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/val.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/val.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/evl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/keras_BILSTM_CEF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/keras_Bert_bilstm_crf.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/keras_Bert_bilstm_crf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/keras_LSTM_CRF.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/keras_LSTM_CRF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/deal_docx/docx_to_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/deal_docx/docx_to_txt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/dic_word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_process/dic_word.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/split_content_and_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_process/split_content_and_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/data_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_change.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,53 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/pycharm/.PyCharm/system/python_stubs/1829256522/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="4926" column="8" selection-start-line="4926" selection-start-column="8" selection-end-line="4926" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/check_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity_contract/gen_label.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="140" column="18" lean-forward="true" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/txt_process/contact_label_and_content.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="128" column="85" lean-forward="true" selection-start-line="128" selection-start-column="85" selection-end-line="128" selection-end-column="85" />
+            <state relative-caret-position="200">
+              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="34" selection-end-column="3" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -137,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/txt_process/split_content_and_label.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="69" column="83" lean-forward="true" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
+            <state relative-caret-position="321">
+              <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -247,8 +186,8 @@
         <option value="$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py" />
         <option value="$PROJECT_DIR$/entity_contract/normal_param.py" />
         <option value="$PROJECT_DIR$/script/deal_docx/docx_to_txt.py" />
-        <option value="$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" />
         <option value="$PROJECT_DIR$/script/txt_process/split_content_and_label.py" />
+        <option value="$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" />
       </list>
     </option>
   </component>
@@ -553,7 +492,7 @@
       <workItem from="1601365728773" duration="110324000" />
       <workItem from="1602139752143" duration="166976000" />
       <workItem from="1602815150002" duration="23135000" />
-      <workItem from="1602857319227" duration="116254000" />
+      <workItem from="1602857319227" duration="116335000" />
     </task>
     <task id="LOCAL-00001" summary="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
       <created>1584520442931</created>
@@ -566,7 +505,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1114877000" />
+    <option name="totallyTimeSpent" value="1114958000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -581,7 +520,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49776787" visible="true" weight="0.18508998" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49776787" visible="true" weight="0.18508998" />
       <window_info id="Structure" order="1" sideWeight="0.50223213" side_tool="true" weight="0.18251929" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -596,7 +535,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="SOQL Query" order="10" />
       <window_info anchor="bottom" id="Log Analyzer" order="11" weight="0.32962137" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4993573" visible="true" weight="0.23955432" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4993573" visible="true" weight="0.23955432" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50064266" side_tool="true" weight="0.23955432" />
       <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32962137" />
       <window_info anchor="bottom" id="Python Console" order="15" weight="0.32962137" />
@@ -1247,46 +1186,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/check_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/pycharm/.PyCharm/system/python_stubs/1829256522/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="4926" column="8" selection-start-line="4926" selection-start-column="8" selection-end-line="4926" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
           <caret line="140" column="18" lean-forward="true" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/gen_label.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/deal_docx/docx_to_txt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1308,22 +1213,56 @@
     <entry file="file://$PROJECT_DIR$/script/txt_process/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/txt_process/contact_label_and_content.py">
+    <entry file="file://$PROJECT_DIR$/script/txt_process/split_content_and_label.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="128" column="85" lean-forward="true" selection-start-line="128" selection-start-column="85" selection-end-line="128" selection-end-column="85" />
+        <state relative-caret-position="321">
+          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/txt_process/split_content_and_label.py">
+    <entry file="file://$PROJECT_DIR$/entity_contract/gen_label.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="69" column="83" lean-forward="true" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
+        <state relative-caret-position="1350">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/check_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1450">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/pycharm/.PyCharm/system/python_stubs/1829256522/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="4926" column="8" selection-start-line="4926" selection-start-column="8" selection-end-line="4926" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/deal_docx/docx_to_txt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/txt_process/contact_label_and_content.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="34" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -4,35 +4,35 @@ from utils import normal_util
 from tqdm import tqdm
 import re
 
-# tag_dic = {
-#     "person": "PERSON",
-#     "house": "HOUSE",
-#     "location": "LOCATION",
-#     "area": "AREA",
-#     "time": "TIME",
-#     "term": "TERM",
-#     "rent": "RENT",
-#     "money": "MONEY",
-#     "rule": "RULE",
-#     "invoice": "INVOICE",
-#     "used": "USED",
-#     "paperwork": "PAPERWORK",
-#     "org": "ORG",
-#     "contract": "CONTRACT",
-#     "duty": "DUTY",
-#     "structure": "STRUCTURE",
-#     "name": "NAME",
-#     "license_number": "LICENSE_NUMBER"
-# }
 tag_dic = {
-    "org" : "ORG",
-    "location" : "LOCATION",
-    "time" : "TIME",
-    "money" : "MONEY",
-    "person" : "PERSON",
-    "number" : "NUMBER",
-    "object" : "OBJECT"
+    "person": "PERSON",
+    "house": "HOUSE",
+    "location": "LOCATION",
+    "area": "AREA",
+    "time": "TIME",
+    "term": "TERM",
+    "rent": "RENT",
+    "money": "MONEY",
+    "rule": "RULE",
+    "invoice": "INVOICE",
+    "used": "USED",
+    "paperwork": "PAPERWORK",
+    "org": "ORG",
+    "contract": "CONTRACT",
+    "duty": "DUTY",
+    "structure": "STRUCTURE",
+    "name": "NAME",
+    "license_number": "LICENSE_NUMBER"
 }
+# tag_dic = {
+#     "org" : "ORG",
+#     "location" : "LOCATION",
+#     "time" : "TIME",
+#     "money" : "MONEY",
+#     "person" : "PERSON",
+#     "number" : "NUMBER",
+#     "object" : "OBJECT"
+# }
 
 def read_file(r_ann_path, r_txt_path, w_path, store_path):
     '''读取ann内容转成数组'''
