@@ -1,5 +1,6 @@
 from pro_data import process_data
 from contact_classify import normal_param
+from sklearn.multiclass import OneVsRestClassifier
 import numpy as np
 def load_corpus():
     process_data_init = process_data.process_data()
@@ -33,31 +34,40 @@ lda = models.ldamodel.LdaModel(clean_data, id2word=dic,  num_topics=20)
 
 d_l=[]
 labelss=[]
-length = 1000000
+length = 0
 for x in range(len(corpus)):
     tmp=[]
     a1=dic.doc2bow(corpus[x])
     for xx in lda[a1]:
         #print(xx)
-        tmp.append(xx[1])
+        tmp.append(xx[0])
+    length = max(length, len(tmp))
+    for i in range(len(tmp), 30):
+        tmp.append(-1)
     # if len(tmp)!=lda.num_topics:
     #     continue
-    length = min(length, len(tmp))
+
     d_l.append(tmp)
     labelss.append(labels[x])
 new_d_l = []
 for i in d_l:
     new_d_l.append(i[: length])
+    # new_d_l.append(i)
 
 from sklearn.svm  import  SVC
 from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import SGDClassifier
+from sklearn.tree import DecisionTreeClassifier
 X_train,X_test, Y_train, Y_test = train_test_split(new_d_l,labelss,test_size=0.3)
-# sv=SVC(decision_function_shape = 'ovo')
-sv = GaussianNB()
+# sv=OneVsRestClassifier(LDA(), 3)
+sv = OneVsRestClassifier(GaussianNB(), 3)
+# sv = OneVsRestClassifier(DecisionTreeClassifier(), 3)
 # sv = PCA()
+# sv = OneVsRestClassifier(SGDClassifier(loss="log", n_iter_no_change=200), 3)
+# sv = OneVsRestClassifier(SVC(), 3)
 print('训练')
 sv.fit(X_train,Y_train)
 from sklearn.metrics import classification_report

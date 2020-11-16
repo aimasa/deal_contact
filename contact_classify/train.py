@@ -43,7 +43,7 @@ def train():
 
             loss_summary = tf.summary.scalar("loss", cnn_init.loss)
             acc_summary = tf.summary.scalar("accuracy", cnn_init.accuracy)
-
+            .
             train_summary_op = tf.summary.merge([loss_summary, acc_summary])
             train_summary_dir = os.path.join(out_dir, "summary", "train")
             train_summary_write = tf.summary.FileWriter(train_summary_dir, sess.graph_def)

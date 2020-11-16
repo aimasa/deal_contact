@@ -1,6 +1,6 @@
 from entity_contract import NER_pre_data, process_data_for_keras, NERInference, normal_param
 from model import keras_BILSTM_CEF
-from model import keras_BILSTM_CEF, keras_Bert_bilstm_crf, keras_LSTM_CRF, keras_word2vec_bilstm_crf
+from model import keras_BILSTM_CEF, keras_Bert_bilstm_crf, keras_LSTM_CRF, keras_word2vec_bilstm_crf, keras_RNN_CRF
 
 
 def prediction(path, mode = "bilstm", is_eval = False):
@@ -15,6 +15,9 @@ def prediction(path, mode = "bilstm", is_eval = False):
     elif mode == "bert_bilstm":
         save_path = normal_param.save_path_bert_bilstm
         model = keras_Bert_bilstm_crf.load_embedding_bilstm2_crf_model(save_path, len(labels_to_ix))
+    elif mode == "rnn":
+        save_path = normal_param.save_path_gru
+        model = keras_RNN_CRF.load_embedding_bilstm2_crf_model(save_path,len(vocab), len(labels_to_ix), 0)
     else:
         save_path = normal_param.save_path_wordVEC_bilstm
         embeddings_matrix, vocab = process_data_for_keras.txtpad_use_word2vec()
@@ -38,5 +41,5 @@ def prediction(path, mode = "bilstm", is_eval = False):
 
 if __name__ == '__main__':
     # run()
-    tmp = prediction(normal_param.head_test_path, mode="bert_bilstm", is_eval=True)
+    tmp = prediction("F:\\data\\test\\other_content", mode="bert_bilstm", is_eval=True)
     print(tmp)

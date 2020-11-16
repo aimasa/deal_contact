@@ -29,7 +29,7 @@ def build_bilstm_crf_model(NUM_CLASS):
     model.add(Dropout(0.5))
     crf_layer = CRF(NUM_CLASS, sparse_target=True)
     model.add(crf_layer)
-    model.build((None, 248, 768))
+    model.build((None, 238, 768))
     # model.summary()
     adam = Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
     model.compile(loss=losses.crf_loss, optimizer='rmsprop',

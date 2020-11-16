@@ -1,4 +1,4 @@
-from model import keras_BILSTM_CEF, keras_Bert_bilstm_crf, keras_LSTM_CRF, keras_word2vec_bilstm_crf
+from model import keras_BILSTM_CEF, keras_Bert_bilstm_crf, keras_LSTM_CRF, keras_word2vec_bilstm_crf, keras_RNN_CRF
 from entity_contract import process_data_for_keras
 from entity_contract import normal_param
 from utils import check_utils
@@ -13,16 +13,20 @@ def run(model_name):
     :return:
     '''
     if model_name == 'bilstm_crf':
-        x_train, y_train, x_test, y_test, vocab_length, labels_to_ix_length = process_data_for_keras.process_data()
+        x_train, y_train, x_test, y_test, vocab_length, labels_to_ix_length = process_data_for_keras.process_data(embeding= "bilstm")
         model = keras_BILSTM_CEF.build_embedding_bilstm2_crf_model(vocab_length, labels_to_ix_length, 0)
         save_path = normal_param.save_path_bilstm
+    elif model_name == "rnn_crf":
+        x_train, y_train, x_test, y_test, vocab_length, labels_to_ix_length = process_data_for_keras.process_data(embeding= "rnn")
+        model = keras_RNN_CRF.build_embedding_lstm2_crf_model(vocab_length, labels_to_ix_length, 0)
+        save_path = normal_param.save_path_gru
     elif model_name == 'bert_bilstm_crf':
         x_train, y_train, x_test, y_test, vocab_length, labels_to_ix_length = process_data_for_keras.process_data(
             embeding="bert")
         model = keras_Bert_bilstm_crf.build_bilstm_crf_model(labels_to_ix_length)
         save_path = normal_param.save_path_bert_bilstm
     elif model_name == 'lstm_crf':
-        x_train, y_train, x_test, y_test, vocab_length, labels_to_ix_length = process_data_for_keras.process_data()
+        x_train, y_train, x_test, y_test, vocab_length, labels_to_ix_length = process_data_for_keras.process_data(embeding="lstm")
         model = keras_LSTM_CRF.build_embedding_lstm2_crf_model(vocab_length, labels_to_ix_length, 0)
         save_path = normal_param.save_path_lstm
     else:
@@ -31,6 +35,7 @@ def run(model_name):
 
         model = keras_word2vec_bilstm_crf.build_embedding_bilstm2_crf_model(labels_to_ix_length, embeddings_matrix, normal_param.max_length)
         save_path = normal_param.save_path_wordVEC_bilstm
+
     if check_utils.check_path(save_path):
         model.load_weights(save_path)
     model.fit(x_train, y_train, batch_size=18, epochs=20, validation_data = (x_test, y_test), shuffle = False, validation_split=0.2, verbose=1)
@@ -53,4 +58,4 @@ def run(model_name):
 
 if __name__ == '__main__':
     # run_by_gen()
-    run(model_name = "wordvec")
+    run(model_name = "rnn_crf")

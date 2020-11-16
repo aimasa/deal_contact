@@ -31,8 +31,8 @@ class NERInference:
         for index in range(length):
             tag_result, ix_result = self.predict(contents[index], lengths[index])
             # print(tag_result)
-            # print(contents_txtlist[index])
-            # print(tag_result)
+            print(contents_txtlist[index])
+            print(tag_result)
             result.append(tag_result)
             result_ix.append(ix_result)
         return result, result_ix
@@ -48,7 +48,7 @@ class NERInference:
         #         break
         #     # print("{:15}: {}".format(self.words[w], self.tags[pred]))
         #     preds.append(list(self.tags.keys())[list(self.tags.values()).index(pred)])
-        if self.mode == "lstm" or self.mode == "bilstm" or self.mode == "wordvec":
+        if self.mode == "lstm" or self.mode == "bilstm" or self.mode == "wordvec" or self.mode == "rnn":
             raw = self.model.predict(content)[0][-length:]
         else:
             raw = self.model.predict(content)[0][:length]
@@ -73,7 +73,7 @@ def read_single_data(path, vocab, length, mode = "bilstm", is_evl = False):
     lengths = []
     labels_array = []
     if is_evl:
-        contents = NER_pre_data.read_content(path, mode = mode)
+        contents = NER_pre_data.read_content(path, mode = "txt")
         labels = NER_pre_data.read_content(path)
 
         for tmp in contents:

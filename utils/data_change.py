@@ -30,7 +30,7 @@ def prepare_sequence(seqs, to_ix):
 
 def auto_pad(seqs, to_ix, length, is_label = False, model = "bilstm"):
 
-        if model == "bilstm":
+        if model == "bilstm" or model == "lstm" or model == "rnn":
             x = [[to_ix.get(w, 1) for w in s] for s in seqs]
 
             if is_label is False:
@@ -57,7 +57,7 @@ def auto_pad(seqs, to_ix, length, is_label = False, model = "bilstm"):
 def auto_single_test_pad(seq, to_ix, length, is_label = False, mode = "bilstm"):
     # seq = seq.split("")
 
-    if mode == "bilstm" or mode == "lstm":
+    if mode == "bilstm" or mode == "lstm" or mode == "rnn":
         x = [to_ix.get(w, 1) for w in seq]
         if is_label is False:
             max_length = len(x)

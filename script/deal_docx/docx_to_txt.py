@@ -62,11 +62,11 @@ def run(root_path, head_path, error_path):
 
 
 if __name__ == '__main__':
-    root_path = "F:/rent_house_contract_pos/tst/rent_house_contract_pos"
-    head_path = "F:/contract/dev"
-    error_path = "F:/error_contract"
-    # root_path = "G:\\tim照片消息缓存聚集地\消息缓存\\794182811\\FileRecv\\合同数据\\合同数据"
-    # head_path = "G:\\tim照片消息缓存聚集地\\消息缓存\\79418281" \
-    #             "1\\FileRecv\\合同数据\\dev"
+    # root_path = "F:/rent_house_contract_pos/tst/rent_house_contract_pos"
+    # head_path = "F:/contract/dev"
     # error_path = "F:/error_contract"
+    root_path = "G:\\tim照片消息缓存聚集地\消息缓存\\794182811\\FileRecv\\合同数据\\合同数据"
+    head_path = "G:\\tim照片消息缓存聚集地\\消息缓存\\79418281" \
+                "1\\FileRecv\\合同数据\\dev"
+    error_path = "F:/error_contract"
     run(root_path, head_path, error_path)

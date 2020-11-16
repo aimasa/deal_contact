@@ -47,9 +47,11 @@ def pre_score(head_path):
     pre_labels_all = []
 
     for index in range(len(paths)):
-        labels = val.prediction(paths[index], mode="wordvec")
+        labels = val.prediction(paths[index], mode="rnn")
         labels_entire =NER_pre_data.read_content(label_paths[index])
         for i in range(len(labels)):
+            if len(labels[i]) != len(labels_entire[i]):
+                continue
             pre_labels_all += labels[i]
             labels_all += labels_entire[i]
     print(classification_report(pre_labels_all, labels_all))

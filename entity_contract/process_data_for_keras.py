@@ -153,7 +153,7 @@ def deal_txt_label_to_array(txt, label, vocab, labels_to_ix, length, mode = "bil
     :param mode: embeding模式
     :return: label_array  label的数组, array_txt 文本的数组
     '''
-    if mode is "bilstm":
+    if mode is "bilstm" or mode == "lstm" or mode == "rnn":
         array_txt, _ = data_change.auto_pad(txt, vocab, length)
     elif mode == 'bert':
         array_txt = get_sentence(txt)
