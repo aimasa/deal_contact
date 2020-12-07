@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
-      <change afterPath="$PROJECT_DIR$/entity_contract/checkpoints/bert_bilstm_crf_liuxiao.h5py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity_contract/checkpoints/bilstm_crf_liuxiao.h5py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity_contract/checkpoints/gru_crf.h5py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity_contract/checkpoints/lstm_crf_liuxiao.h5py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/keras_CNN_CRF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/keras_RNN_CRF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/relation_contract/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact_classify/LSI_.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact_classify/LSI_.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact_classify/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact_classify/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/NERInference.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/NERInference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/gen_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/gen_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/normal_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/normal_param.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/process_data_for_keras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/val.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/val.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/keras_Bert_bilstm_crf.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/keras_Bert_bilstm_crf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/deal_docx/docx_to_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/deal_docx/docx_to_txt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/dic_word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_process/dic_word.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/split_content_and_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_process/split_content_and_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/data_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data_change.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_script/test_classfiy.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_script/test_classfiy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contact_classify/LSI_.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1750">
+            <state relative-caret-position="1825">
               <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -62,49 +43,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+            <state relative-caret-position="-1367">
+              <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/sklearn/linear_model/_stochastic_gradient.py">
+        <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23450">
-              <caret line="968" column="33" selection-start-line="968" selection-start-column="17" selection-end-line="968" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/sklearn/multiclass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4650">
-              <caret line="208" column="8" selection-start-line="208" selection-start-column="8" selection-end-line="208" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity_contract/train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="23" column="105" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="105" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity_contract/process_data_for_keras.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6825">
-              <caret line="283" column="4" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+            <state relative-caret-position="-1642">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contact_classify/result.md">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_script/test_classfiy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+              <folding>
+                <element signature="e#1#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spyder/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>label_to_ix</find>
       <find>DEADLINE</find>
       <find>TYPE</find>
       <find>ENDTERM</find>
@@ -151,7 +138,11 @@
       <find>save_load_utils</find>
       <find>pd</find>
       <find>if</find>
+      <find>flask</find>
     </findStrings>
+    <dirStrings>
+      <dir>F:\phython workspace\deal_contact</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_script/test_classfiy.py" />
         <option value="$PROJECT_DIR$/spyder/www_chinalawedu_com.py" />
         <option value="$PROJECT_DIR$/spyder/www_diyifanwen_com.py" />
         <option value="$PROJECT_DIR$/spyder/main.py" />
@@ -210,6 +200,7 @@
         <option value="$PROJECT_DIR$/contact_classify/normal_param.py" />
         <option value="$PROJECT_DIR$/contact_classify/LSI_.py" />
         <option value="$PROJECT_DIR$/contact_classify/train.py" />
+        <option value="$PROJECT_DIR$/test_script/test_classfiy.py" />
       </list>
     </option>
   </component>
@@ -220,10 +211,10 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="130" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -241,22 +232,7 @@
             <path>
               <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
               <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
-              <item name="contact_classify" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
-              <item name="entity_contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deal_contact" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deal_contact" type="462c0819:PsiDirectoryNode" />
-              <item name="relation_contract" type="462c0819:PsiDirectoryNode" />
+              <item name="spyder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -268,7 +244,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deepke" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deal_contact_v2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -277,6 +253,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -504,7 +481,10 @@
       <workItem from="1604496125442" duration="11258000" />
       <workItem from="1604649446659" duration="5180000" />
       <workItem from="1604992386543" duration="8885000" />
-      <workItem from="1605240966467" duration="9131000" />
+      <workItem from="1605240966467" duration="38293000" />
+      <workItem from="1606374193342" duration="1401000" />
+      <workItem from="1606382333715" duration="2273000" />
+      <workItem from="1606440850250" duration="9438000" />
     </task>
     <task id="LOCAL-00001" summary="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
       <created>1584520442931</created>
@@ -517,23 +497,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1186001000" />
+    <option name="totallyTimeSpent" value="1228275000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
     <todo-panel id="all">
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
+      <is-preview-enabled value="true" />
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49776787" visible="true" weight="0.19537275" />
-      <window_info id="Structure" order="1" sideWeight="0.50223213" side_tool="true" weight="0.18251929" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49482402" visible="true" weight="0.20308483" />
+      <window_info id="Structure" order="1" sideWeight="0.505176" side_tool="true" weight="0.20308483" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32729805" />
@@ -541,14 +521,14 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3523677" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286908" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32729805" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.23119777" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="SOQL Query" order="10" />
       <window_info anchor="bottom" id="Log Analyzer" order="11" weight="0.32962137" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49871466" visible="true" weight="0.23955432" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.5012854" side_tool="true" visible="true" weight="0.23955432" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49807197" weight="0.25766018" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50192803" side_tool="true" weight="0.23955432" />
       <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32962137" />
       <window_info anchor="bottom" id="Python Console" order="15" weight="0.32962137" />
       <window_info anchor="bottom" id="Compute Code Lines" order="16" show_stripe_button="false" weight="0.32962137" />
@@ -609,11 +589,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/spyder/main.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py</url>
           <line>179</line>
@@ -718,6 +693,11 @@
           <url>file://$PROJECT_DIR$/entity_contract/process_data_for_keras.py</url>
           <line>156</line>
           <option name="timeStamp" value="420" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/contact_classify/train.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="421" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -849,82 +829,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras_bert/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="142" column="4" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras/engine/saving.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="1166" selection-start-line="1166" selection-end-line="1166" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="1301" column="8" selection-start-line="1301" selection-start-column="8" selection-end-line="1301" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro_data/process_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/keras/preprocessing/sequence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/batch_label_to_ann.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/tensorflow/python/pywrap_tensorflow_internal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="677" selection-start-line="677" selection-end-line="677" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_script/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,47 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/LSI_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/sklearn/linear_model/_stochastic_gradient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23450">
-          <caret line="968" column="33" selection-start-line="968" selection-start-column="17" selection-end-line="968" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/sklearn/multiclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4650">
-          <caret line="208" column="8" selection-start-line="208" selection-start-column="8" selection-end-line="208" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="23" column="105" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/process_data_for_keras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6825">
-          <caret line="283" column="4" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact_classify/normal_param.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -1258,12 +1125,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/sklearn/linear_model/_stochastic_gradient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+        <state relative-caret-position="23450">
+          <caret line="968" column="33" selection-start-line="968" selection-start-column="17" selection-end-line="968" selection-end-column="33" />
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Anaconda3/envs/deal_contact_new_env/Lib/site-packages/sklearn/multiclass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4650">
+          <caret line="208" column="8" selection-start-line="208" selection-start-column="8" selection-end-line="208" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_contract/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="23" column="105" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_script/test_play.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1367">
+          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/result.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/LSI_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1825">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_classify/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1642">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_script/new_bert_bilstm_crf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-575">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_contract/process_data_for_keras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="283" column="4" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_script/Ner_MSAR_tstmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2331">
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_script/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_script/test_classfiy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+          <folding>
+            <element signature="e#1#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spyder/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2005571" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

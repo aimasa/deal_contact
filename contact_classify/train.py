@@ -35,6 +35,7 @@ def train():
             global_step = tf.Variable(0, name="global_step", trainable=False)
             optimizer = tf.train.AdamOptimizer(1e-3)
             grads_and_vars = optimizer.compute_gradients(cnn_init.loss)
+
             train_op = optimizer.apply_gradients(grads_and_vars, global_step=global_step)
             time_step = str(int(time.time()))
             print(time.time())
@@ -43,7 +44,6 @@ def train():
 
             loss_summary = tf.summary.scalar("loss", cnn_init.loss)
             acc_summary = tf.summary.scalar("accuracy", cnn_init.accuracy)
-            .
             train_summary_op = tf.summary.merge([loss_summary, acc_summary])
             train_summary_dir = os.path.join(out_dir, "summary", "train")
             train_summary_write = tf.summary.FileWriter(train_summary_dir, sess.graph_def)
@@ -57,6 +57,7 @@ def train():
             max_acc = 0
 
             checkpoint_dir = os.path.abspath(os.path.join(out_dir, "checkpoint"))
+
             checkpoint_prefix = os.path.join(checkpoint_dir, "model")
             if not os.path.exists(checkpoint_dir):
                 os.makedirs(checkpoint_dir)
