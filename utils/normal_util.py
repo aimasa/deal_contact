@@ -109,7 +109,7 @@ def shuffle(txt, label):
 
 
 def write_content(content, write_path):
-    with open(write_path, 'a') as f:
+    with open(write_path, 'a', encoding='utf-8') as f:
         f.write(content)
 
 

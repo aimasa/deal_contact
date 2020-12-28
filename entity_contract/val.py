@@ -3,7 +3,7 @@ from model import keras_BILSTM_CEF
 from model import keras_BILSTM_CEF, keras_Bert_bilstm_crf, keras_LSTM_CRF, keras_word2vec_bilstm_crf, keras_RNN_CRF
 
 
-def prediction(path, mode = "bilstm", is_eval = False):
+def prediction(path, mode = "bert_bilstm", is_eval = False):
     labels_to_ix, ix_to_label = NER_pre_data.build_label(normal_param.labels)
     vocab = process_data_for_keras.read_vocab(normal_param.lstm_vocab)
     if mode == "lstm":
