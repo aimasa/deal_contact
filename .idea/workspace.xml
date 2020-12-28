@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
-      <change afterPath="$PROJECT_DIR$/script/data fill/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/data fill/filledData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/relation_contract/ann_to_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/relation_contract/txt_segmented.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/NER_pre_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/NER_pre_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/batch_label_to_ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/batch_label_to_ann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/normal_param.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/normal_param.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/val.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/val.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/ann_process/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/contact_label_and_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/ann_process/ann_to_label_and_txt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/dic_word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script/ann_process/dic_word.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_process/split_content_and_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/ann_process/split_content_and_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/normal_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normal_util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +31,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/data fill/filledData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="355" column="40" selection-start-line="355" selection-start-column="40" selection-end-line="355" selection-end-column="40" />
+            <state relative-caret-position="479">
+              <caret line="352" column="12" lean-forward="true" selection-start-line="352" selection-start-column="12" selection-end-line="352" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/relation_contract/ann_to_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-125">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/relation_contract/txt_segmented.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -81,18 +89,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/keras_BILSTM_CEF.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -131,22 +127,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/ann_process/ann_to_label_and_txt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="79" column="33" lean-forward="true" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/normal_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+            <state relative-caret-position="288">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -206,8 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spyder/www_diyifanwen_com.py" />
-        <option value="$PROJECT_DIR$/spyder/main.py" />
         <option value="$PROJECT_DIR$/spyder/www_64365_com.py" />
         <option value="$PROJECT_DIR$/model/BERT_LSTM_CRF.py" />
         <option value="$PROJECT_DIR$/model/CRF.py" />
@@ -257,6 +239,8 @@
         <option value="$PROJECT_DIR$/utils/normal_util.py" />
         <option value="$PROJECT_DIR$/entity_contract/val.py" />
         <option value="$PROJECT_DIR$/entity_contract/normal_param.py" />
+        <option value="$PROJECT_DIR$/relation_contract/ann_to_example.py" />
+        <option value="$PROJECT_DIR$/relation_contract/txt_segmented.py" />
       </list>
     </option>
   </component>
@@ -375,7 +359,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.batch_label_to_ann">
+  <component name="RunManager" selected="Python.ann_to_example">
     <configuration name="LSI_" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deal_contact" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -390,6 +374,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/contact_classify/LSI_.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ann_to_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="deal_contact" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/relation_contract" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/relation_contract/ann_to_example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -464,35 +470,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="deal_contact" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/entity_contract" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/entity_contract/train.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ann_to_example" />
         <item itemvalue="Python.batch_label_to_ann" />
         <item itemvalue="Python.filledData" />
         <item itemvalue="Python.gen_label" />
         <item itemvalue="Python.LSI_" />
-        <item itemvalue="Python.train" />
       </list>
     </recent_temporary>
   </component>
@@ -574,7 +558,7 @@
       <workItem from="1606382333715" duration="2273000" />
       <workItem from="1606440850250" duration="12516000" />
       <workItem from="1608708437001" duration="48150000" />
-      <workItem from="1608902204972" duration="4419000" />
+      <workItem from="1608902204972" duration="13016000" />
     </task>
     <task id="LOCAL-00001" summary="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
       <created>1584520442931</created>
@@ -587,7 +571,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1283922000" />
+    <option name="totallyTimeSpent" value="1292519000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -601,14 +585,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49482402" visible="true" weight="0.20822622" />
-      <window_info id="Structure" order="1" sideWeight="0.505176" side_tool="true" weight="0.20308483" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81935483" visible="true" weight="0.20822622" />
+      <window_info id="Structure" order="1" sideWeight="0.18064517" side_tool="true" visible="true" weight="0.20822622" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32729805" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28412256" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3523677" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28412256" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3523677" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32729805" />
@@ -780,11 +765,6 @@
           <option name="timeStamp" value="469" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/utils/normal_util.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="475" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/entity_contract/val.py</url>
           <line>16</line>
           <option name="timeStamp" value="476" />
@@ -793,6 +773,11 @@
           <url>file://$PROJECT_DIR$/entity_contract/NERInference.py</url>
           <line>23</line>
           <option name="timeStamp" value="477" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/relation_contract/ann_to_example.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="482" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -826,6 +811,7 @@
     <SUITE FILE_PATH="coverage/deal_contact$filledData.coverage" NAME="filledData Coverage Results" MODIFIED="1608903820569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/data fill" />
     <SUITE FILE_PATH="coverage/deal_contact$pre_deal.coverage" NAME="pre_deal Coverage Results" MODIFIED="1590674277539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entity_contract" />
     <SUITE FILE_PATH="coverage/deal_contact$filter_file_name.coverage" NAME="filter_file_name Coverage Results" MODIFIED="1596886761271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/deal_contact$ann_to_example.coverage" NAME="ann_to_example Coverage Results" MODIFIED="1609142650144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/relation_contract" />
     <SUITE FILE_PATH="coverage/deal_contact$contact_label_and_content.coverage" NAME="contact_label_and_content Coverage Results" MODIFIED="1603531588650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/txt_process" />
     <SUITE FILE_PATH="coverage/deal_contact$www_64365_com.coverage" NAME="www_64365_com Coverage Results" MODIFIED="1597320456029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spyder" />
     <SUITE FILE_PATH="coverage/deal_contact$NER_pre_data.coverage" NAME="NER_pre_data Coverage Results" MODIFIED="1601547699214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/entity_contract" />
@@ -930,19 +916,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/script/ann_process/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/keras_word2vec_bilstm_crf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/doc_to_docx/doc_to_docx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1320,16 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/normal_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1352,13 +1315,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/script/data fill/filledData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="355" column="40" selection-start-line="355" selection-start-column="40" selection-end-line="355" selection-end-column="40" />
+        <state relative-caret-position="479">
+          <caret line="352" column="12" lean-forward="true" selection-start-line="352" selection-start-column="12" selection-end-line="352" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/normal_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relation_contract/ann_to_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relation_contract/txt_segmented.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
