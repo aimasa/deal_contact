@@ -15,14 +15,14 @@ entity_T :{
            }
 '''
 
-def gain_relation_contact_entity(path):
+def gain_relation_contact_entity(entity_T, path):
     '''
     通过ann文件获取关系和实体的联系
     :param path: ann路径
     :return:
     '''
     ann_contents = normal_util.read_txt(path)
-    entity_T = defaultdict()
+    # entity_T = defaultdict()
     for ann_content in ann_contents.split("\n"):
         if len(ann_content) <= 1:
             continue
@@ -135,5 +135,5 @@ def filter_relation(str):
     return False
 
 
-if __name__ == "__main__":
-    gain_relation_contact_entity("F:/data/test/test/ann/1.ann")
+# if __name__ == "__main__":
+#     gain_relation_contact_entity("F:/data/test/test/ann/1.ann")

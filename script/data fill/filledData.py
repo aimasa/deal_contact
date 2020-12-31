@@ -312,6 +312,7 @@ def write_all_data_to_txt(path, all_txt_dic, list_txt_name):
 
 
 
+
 def fill_data(txt_dic, label_dic, path):
     '''
     根据标签填充数据
