@@ -69,12 +69,12 @@ flags.DEFINE_integer(
     "Sequences longer than this will be truncated, and sequences shorter "
     "than this will be padded.")
 
-flags.DEFINE_bool("do_train", False, "Whether to run training.")
+flags.DEFINE_bool("do_train", True, "Whether to run training.")
 
-flags.DEFINE_bool("do_eval", True, "Whether to run eval on the dev set.")
+flags.DEFINE_bool("do_eval", False, "Whether to run eval on the dev set.")
 
 flags.DEFINE_bool(
-    "do_predict", False,
+    "do_predict", True,
     "Whether to run the model in inference mode on the test set.")
 
 flags.DEFINE_integer("train_batch_size", 2, "Total batch size for training.")
@@ -83,15 +83,16 @@ flags.DEFINE_integer("eval_batch_size", 2, "Total batch size for eval.")
 
 flags.DEFINE_integer("predict_batch_size", 1, "Total batch size for predict.")
 
-flags.DEFINE_float("learning_rate", 5e-5, "The initial learning rate for Adam.")
+flags.DEFINE_float("learning_rate", 2e-5, "The initial learning rate for Adam.")
 
-flags.DEFINE_float("num_train_epochs", 3.0,
+flags.DEFINE_float("num_train_epochs", 70,
                    "Total number of training epochs to perform.")
 
 flags.DEFINE_float(
     "warmup_proportion", 0.1,
     "Proportion of training to perform linear learning rate warmup for. "
     "E.g., 0.1 = 10% of training.")
+
 
 flags.DEFINE_integer("save_checkpoints_steps", 1000,
                      "How often to save the model checkpoint.")
@@ -126,7 +127,7 @@ flags.DEFINE_integer(
     "Only used if `use_tpu` is True. Total number of TPU cores to use.")
 
 flags.DEFINE_integer(
-    "max_num_relations", 13,
+    "max_num_relations", 20,
     "Maximum number of relation within the text")
 
 flags.DEFINE_integer(
@@ -815,7 +816,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
         elif mode == tf.estimator.ModeKeys.EVAL:
 
             def metric_fn(per_example_loss, label_ids, logits, is_real_example):
-                predictions = tf.argmax(label_ids, 1)
+                predictions = tf.argmax(logits, 1)
                 predictions = tf.one_hot(predictions, np.size(label_ids, -1))
                 # accuracy = tf.metrics.accuracy(
                 #     labels=label_ids, predictions=predictions, weights=None)
@@ -1097,11 +1098,36 @@ def main(_):
 
         result = estimator.predict(input_fn=predict_input_fn)
         output_predict_file = os.path.join(FLAGS.output_dir, "test_results.tsv")
+        num_actual_eval_examples = len(predict_examples)
+        real_label_list = []
+        length = 0
+        for index in range(len(predict_examples)):
+
+            length += len(predict_examples[index].labels)
+            print(len(predict_examples[index].labels))
+            real_label_list += predict_examples[index].labels
+        print(len(real_label_list))
+        print(length)
+
+        pre_label = []
+        length = 0
         with tf.gfile.GFile(output_predict_file, "w") as writer:
             tf.logging.info("***** Predict results *****")
             for prediction, example in zip(result, predict_examples):
+                length += len(example.labels)
+                writer.write(example.text_a + '\n')
                 for x in prediction[:example.num_relations]:
+                    pre_label.append(label_list[int(x)])
                     writer.write(label_list[int(x)] + '\n')
+                writer.write('\n')
+        print(length)
+        from sklearn.metrics import classification_report
+
+        # Y_test = np.array(Y_test).reshape(len(Y_test), -1)
+        # enc = OneHotEncoder()
+        # enc.fit(Y_test)
+        # targets = enc.transform(Y_test).toarray()
+        print(classification_report(real_label_list, pre_label))
 
 
 if __name__ == "__main__":

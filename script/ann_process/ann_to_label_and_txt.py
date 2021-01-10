@@ -47,6 +47,8 @@ def read_file(r_ann_path, r_txt_path, w_path, store_path):
             print(line_arr)
             if len(line_arr) <= 1:
                 break
+            if "R" in line_arr[0]:
+                continue
             cls = tag_dic[line_arr[1]]
             start_index = int(line_arr[2])
             end_index = int(line_arr[3])

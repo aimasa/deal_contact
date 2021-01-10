@@ -156,8 +156,8 @@ def gain_txt(path):
     :return: txt对应的list列表
     '''
     content = normal_util.read_txt(path)
-
-    content_list = [i for i in content.replace("\n", "\r\n")]
+    # content = content.replace("\r\n", "\n")
+    content_list = [i for i in content]
     return content_list
 
 def gain_time(min_num):
@@ -177,7 +177,11 @@ def gain_time(min_num):
 
     if strftime < min_strftime:
         gain_time(min_num)
-    return data_time
+    num = random.randint(0, 1)
+    if num == 1:
+        return "%s年%s月%s日" %(year_data, month_data, day_data)
+    elif num == 0:
+        return data_time
 
 def gain_timenumber(min_number, max_number):
     '''
@@ -186,9 +190,8 @@ def gain_timenumber(min_number, max_number):
     :param max_number: 最大期限
     :return:
     '''
-    time = ["天", "个月"]
 
-    return "%s%s" %(random.randint(min_number, max_number), time[random.randint(0, 1)])
+    return "%s" %(random.randint(min_number, max_number))
 
 def gain_number(min_number, max_number):
     '''
@@ -217,7 +220,7 @@ def gain_local(path):
     :return: 词典中任意一地理位置
     '''
     location_list = gain_dic_data(path, "location")
-    index = random.randint(0, len(location_list))
+    index = random.randint(0, len(location_list) - 1)
     return location_list[index]
 
 def gain_name(path):
@@ -227,7 +230,7 @@ def gain_name(path):
     :return: 词典中任意一姓名
     '''
     name_list = gain_dic_data(path, "name")
-    index = random.randint(0, len(name_list))
+    index = random.randint(0, len(name_list) - 1)
     return name_list[index]
 
 def gain_case_money(path):
@@ -237,7 +240,7 @@ def gain_case_money(path):
     :return:
     '''
     location_list = gain_dic_data(path, "case_money")
-    index = random.randint(0, len(location_list))
+    index = random.randint(0, len(location_list) - 1)
     return location_list[index]
 
 
@@ -268,6 +271,27 @@ def gain_kind_of_data(mode, path = "", min_num = 0, max_num = 0):
         return gain_name(path)
     elif mode == "replace_case_money":
         return gain_case_money(path)
+    elif mode == "replace_used":
+        return gain_used()
+    elif mode == "replace_money_part":
+        return str(gain_money_part()) + "%"
+    elif mode == "replace_timedata":
+        return gain_replace_timedata()
+
+def gain_replace_timedata():
+    data_list = ["天", "个月", "年"]
+    return "%s%s" %(gain_timenumber(1, 30), data_list[random.randint(0, len(data_list)) - 1])
+def gain_money_part():
+
+    num = random.randint(0, 1)
+    if num == 1:
+        return "百分之%s" % random.randint(0, 100)
+    else:
+        return str(random.randint(0, 100)) + "%"
+
+def gain_used():
+    used_list = ["居住", "仓库"]
+    return used_list[random.randint(0, len(used_list) - 1)]
 
 def get_file_path(base_path):
     '''将ann和txt文件分开；来获取路径列表
@@ -291,10 +315,13 @@ def fill_all_data(path):
     assert len(ann_paths) == len(txt_paths)
     all_txt_dic = []
     for i in range(len(ann_paths)):
-        txt_dic = gain_txt(txt_paths[i])
-        label_dic = gain_label(ann_paths[i], len(txt_dic))
-        txt_dic = fill_data(txt_dic, label_dic, path)
-        all_txt_dic.append(txt_dic)
+        try:
+            txt_dic = gain_txt(txt_paths[i])
+            label_dic = gain_label(ann_paths[i], len(txt_dic))
+            txt_dic = fill_data(txt_dic, label_dic, path)
+            all_txt_dic.append(txt_dic)
+        except:
+            continue
     return all_txt_dic, txts_files_name
 
 def write_all_data_to_txt(path, all_txt_dic, list_txt_name):

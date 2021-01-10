@@ -146,6 +146,12 @@ def check_title_head(title, head):
 
 
 def run(head_path, ann_path):
+    '''
+
+    :param head_path:
+    :param ann_path:
+    :return:
+    '''
     label_path, content_path = read_path(head_path)
     length = len(label_path)
     for i in tqdm(range(length)):

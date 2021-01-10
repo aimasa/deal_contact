@@ -85,9 +85,10 @@ def gain_format_data(type, path):
     ann_paths, txt_paths, txts_files_name = get_file_path(path)
     assert len(ann_paths) == len(txt_paths)
     entity_T = defaultdict()
-    txt_segments, label_segments = gain_entity_and_split_segments(ann_paths, txt_paths, entity_T)
+    txt_segments, label_segments, entity_T = gain_entity_and_split_segments(ann_paths, txt_paths, entity_T)
     all_labels = updata_entity_T(entity_T, label_segments)
-    example = format_relation_and_entity(type, txt_segments, all_labels, entity_T)
+    example, max_label_num = format_relation_and_entity(type, txt_segments, all_labels, entity_T)
+    normal_util.shuffle_(example)
     return example
 
 def gain_entity_and_split_segments(ann_paths, txt_paths, entity_T):
@@ -100,14 +101,17 @@ def gain_entity_and_split_segments(ann_paths, txt_paths, entity_T):
     '''
     txt_segments = []
     label_segments = []
+    entity_infos = []
     for i in range(len(ann_paths)):
-        ann_to_example.gain_relation_contact_entity(entity_T, ann_paths[i])
+        entity_info = {}
+        ann_to_example.gain_relation_contact_entity(entity_info, ann_paths[i])
         txt_dic = gain_txt(txt_paths[i])
         label_dic = gain_label(ann_paths[i], len(txt_dic))
         txt_segment, label_segment = segment_text(txt_dic, label_dic)
-        txt_segments += txt_segment
-        label_segments += label_segment
-    return txt_segments, label_segments
+        txt_segments.append(txt_segment)
+        label_segments.append(label_segment)
+        entity_infos.append(entity_info)
+    return txt_segments, label_segments, entity_infos
 
 
 def format_relation_and_entity(type, txt_segments, all_labels, entity_T):
@@ -120,17 +124,23 @@ def format_relation_and_entity(type, txt_segments, all_labels, entity_T):
     :return: example
     '''
     example = []
-
-
+    num = 0
+    max_label_name = 0
     for index in range(len(txt_segments)):
-        guid = "%s-%s"%(type, index)
+        for next_index in range(len(txt_segments[index])):
+            guid = "%s-%s"%(type, num)
 
-        labels_name, entity_local = gain_label_and_local(all_labels[index], entity_T)
-        if len(labels_name) <= 0:
-            continue
-        example.append(InputExample(guid=guid, text_a="".join(txt_segments[index]), text_b=None,
-                         locations=entity_local, labels=labels_name, num_relations=len(labels_name)))
-    return example
+
+            labels_name, entity_local = gain_label_and_local(all_labels[index][next_index], entity_T[index])
+            if len(labels_name) <= 0:
+                continue
+            max_label_name = max(max_label_name, len(labels_name))
+            example.append(InputExample(guid=guid, text_a="".join(txt_segments[index][next_index]), text_b=None,
+                             locations=entity_local, labels=labels_name, num_relations=len(labels_name)))
+            num += 1
+    return example, max_label_name
+
+
 
 def gain_label_and_local(all_label, entity_T):
     '''
@@ -191,20 +201,23 @@ def updata_entity_T(entity_T, label_segments):
     :return: 每个句子中存在的实体label数组   [[Tn,Tn+u……],[]……]
     '''
     all_labels = []
-    for label_segment in label_segments:
+    for index in range(len(label_segments)):
+        segment_labels = []
+        for label_segment in label_segments[index]:
 
-        labels = []
+            labels = []
 
-        left = 0
-        while left < len(label_segment):
-            right = left + 1
-            while right < len(label_segment) and label_segment[right] == label_segment[left]:
-                right += 1
-            if label_segment[left] != 'O':
-                adjustment_entity_local(label_segment[left], left, right, entity_T)
-                labels.append(label_segment[left])
-            left = right
-        all_labels.append(labels)
+            left = 0
+            while left < len(label_segment):
+                right = left + 1
+                while right < len(label_segment) and label_segment[right] == label_segment[left]:
+                    right += 1
+                if label_segment[left] != 'O':
+                    adjustment_entity_local(label_segment[left], left, right, entity_T[index])
+                    labels.append(label_segment[left])
+                left = right
+            segment_labels.append(labels)
+        all_labels.append(segment_labels)
     return all_labels
 
 def adjustment_entity_local(T_no, left, right, entity_T):

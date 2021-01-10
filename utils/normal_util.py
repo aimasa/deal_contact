@@ -107,6 +107,12 @@ def shuffle(txt, label):
     label = [label[i] for i in index]
     return txt, label
 
+def shuffle_(txt):
+    length = len(txt)
+    index = [i for i in range(length)]
+    random.shuffle(index)
+    txt = [txt[i] for i in index]
+    return txt
 
 def write_content(content, write_path):
     with open(write_path, 'a', encoding='utf-8') as f:
@@ -121,3 +127,15 @@ def gain_filename_from_path(path, mode):
     if mode == 'txt':
         name = re.search("(\\d+)\\.txt", path).group(1)
         return ("%s.txt"% name)
+
+def get_file_path(base_path):
+    '''将ann和txt文件分开；来获取路径列表
+    :param base_path (str) 基础路径（包括ann和txt的）
+    :return anns ann后缀的路径
+    :return txt txt后缀的路径'''
+    path_lists = os.listdir(base_path)
+    ann_files = names_filter(path_lists, ["ann"])
+    txt_files = names_filter(path_lists, ["txt"])
+    anns = [os.path.join(base_path, i) for i in ann_files]
+    txts = [os.path.join(base_path, i) for i in txt_files]
+    return anns, txts, txt_files

@@ -58,4 +58,4 @@ def run(model_name):
 
 if __name__ == '__main__':
     # run_by_gen()
-    run(model_name = "rnn_crf")
+    run(model_name = "bert_bilstm_crf")
