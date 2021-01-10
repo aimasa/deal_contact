@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dffdc1a1-2ce4-4385-951a-d409a3da9988" name="Default Changelist" comment="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/relation_contract/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_contract/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_contract/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/run_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/relation_contract/run_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/eval.tf_record" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/eval/events.out.tfevents.1609390938.DESKTOP-DTTJ3C3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/eval/events.out.tfevents.1609393280.DESKTOP-DTTJ3C3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/eval/events.out.tfevents.1609393351.DESKTOP-DTTJ3C3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/eval_results.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/predict.tf_record" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/test_results.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/tmp/train.tf_record" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation_contract/txt_segmented.py" beforeDir="false" afterPath="$PROJECT_DIR$/relation_contract/txt_segmented.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/ann_process/ann_to_label_and_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/ann_process/ann_to_label_and_txt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/copy_txt_and_ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/copy_txt_and_ann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/data fill/filledData.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/data fill/filledData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/script/txt_to_ann/txt_to_ann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/normal_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normal_util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,17 +33,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entity_contract/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-111">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+            <state relative-caret-position="164">
+              <caret line="33" column="77" lean-forward="true" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/relation_contract/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="113">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -164,7 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model/keras_LSTM_CEF.py" />
         <option value="$PROJECT_DIR$/entity_contract/a.log" />
         <option value="$PROJECT_DIR$/utils/check_utils.py" />
         <option value="$PROJECT_DIR$/entity_contract/load_vocab.py" />
@@ -215,6 +198,7 @@
         <option value="$PROJECT_DIR$/utils/normal_util.py" />
         <option value="$PROJECT_DIR$/relation_contract/txt_segmented.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/relation_contract/README.md" />
       </list>
     </option>
   </component>
@@ -534,7 +518,7 @@
       <workItem from="1608708437001" duration="48150000" />
       <workItem from="1608902204972" duration="98474000" />
       <workItem from="1610070037438" duration="3459000" />
-      <workItem from="1610176956284" duration="17810000" />
+      <workItem from="1610176956284" duration="19967000" />
     </task>
     <task id="LOCAL-00001" summary="1、添加对CNN分类训练的描述&#10;2、对读取文件信息做了容错处理">
       <created>1584520442931</created>
@@ -547,7 +531,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1399246000" />
+    <option name="totallyTimeSpent" value="1401403000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -568,7 +552,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32729805" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28412256" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28412256" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.27019498" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -578,7 +562,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="SOQL Query" order="10" />
       <window_info anchor="bottom" id="Log Analyzer" order="11" weight="0.32962137" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49807197" visible="true" weight="0.25766018" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49807197" weight="0.25766018" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50192803" side_tool="true" weight="0.23955432" />
       <window_info anchor="bottom" id="Anonymous Apex" order="14" weight="0.32962137" />
       <window_info anchor="bottom" id="Python Console" order="15" weight="0.32962137" />
@@ -893,16 +877,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_script/new_bert_bilstm_crf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_script/Ner_MSAR_tstmodel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2331">
@@ -1302,17 +1276,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity_contract/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_contract/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="33" column="77" lean-forward="true" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relation_contract/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
