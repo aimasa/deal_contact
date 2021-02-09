@@ -28,9 +28,12 @@
 # print(['person:' + per, 'location:' + loc, 'organzation:' + org])
 from relation_contract import tokenization
 import os
-label_list = []
-filein = open(os.path.join("F:/data/test/test/relation_label", "label.txt"))
-for line in filein:
-    label = line.strip()
-    label_list.append(tokenization.convert_to_unicode(label))
-print(label_list)
+# label_list = []
+# filein = open(os.path.join("F:/data/test/test/relation_label", "label.txt"))
+# for line in filein:
+#     label = line.strip()
+#     label_list.append(tokenization.convert_to_unicode(label))
+# print(label_list)
+
+from textda.data_expansion import *
+print(data_expansion('(1)租赁期间，房屋和土地的产权税由甲方依法交纳。如果发生政府有关部门征收本合同中未列出项目但与该房屋有关的费用，应由甲方负担。', alpha_ri=0.3, alpha_rs=0))

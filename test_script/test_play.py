@@ -1,12 +1,14 @@
-# def ont_hot(label):
-#     for i in range(len(label)):
-#         max_value = label[i]
-#         for j in range(label[i]):
-#             # if max_value == y_train[i][j]:
-#                 label[i][j] = 1
-#             else:
-#                 label[i][j] = 0
-#
-# if __name__ == "__main__":
-#     label = [1, 2, 0, 1]
-#     ont_hot(label)
+import numpy as np
+import tensorflow as tf
+
+#设置两个乘数，用占位符表示
+input1 = tf.placeholder(tf.float32)
+input2 = tf.placeholder(tf.float32)
+#设置乘积
+output = tf.multiply(input1, input2)
+output2 = tf.add(input1, input2)
+with tf.Session() as sess:
+  #用feed_dict以字典的方式填充占位
+ print(sess.run([output], feed_dict={input1:[8.],input2:[2.]}))
+    # print(sess.run(w1))
+    # print(sess.run(w2))

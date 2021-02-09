@@ -159,10 +159,18 @@ def gain_label_and_local(all_label, entity_T):
         for key in relation_dic:
             labels_name.append(relation_dic[key])
             T2_dic = entity_T[key]
-            entity_local.append((T_dic["local"], T2_dic["local"]))
+            entity_local.append((updata_local(T_dic["local"]), updata_local(T2_dic["local"])))
     return labels_name, entity_local
 
-
+def updata_local(local):
+    '''
+    对实体中的local进行加1处理
+    :param local: 实体对应的local
+    :return: local的起始位置和结束位置分别加1
+    '''
+    local_first = local[0] + 1
+    local_last = local[1] + 1
+    return (local_first, local_last)
 
 
 
